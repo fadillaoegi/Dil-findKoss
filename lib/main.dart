@@ -13,6 +13,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Text("TText cendoll Edit Lagi buat cendol git huub wkwk!! Cendoll seh"));
+        home: Text("TTtext cendoll Edit Lagi buat cendol git huub wkwk!! Cendoll seh"));
   }
 }
