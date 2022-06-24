@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import '../style/style.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../style/textstyle.dart';
 
-var text1 = Text("Find Cozy House\nto Stay and Happy");
+var text1 = Text(
+  "Find Cozy House\nto Stay and Happy",
+  style: Ts1.copyWith(fontSize: 24.0),
+);
 var text2 = Text(
   "Stop membuang banyak waktu\npada tempat yang tidak habitable",
-  style: Ts2,
+  style: Ts3.copyWith(fontSize: 16.0),
 );
-var text3 = Text("Explore Now");
+var text3 = Text(
+  "Explore Now",
+  style: Ts5.copyWith(fontSize: 18.0),
+);
 var textDebug = "ButtonSplash Di pencet";

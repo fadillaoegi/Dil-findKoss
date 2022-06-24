@@ -15,7 +15,10 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       body: SafeArea(
           child: Stack(children: [
-        // Image.asset("assets/images/splash_image.png"),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Image.asset("assets/images/splash_image.png"),
+        ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -46,6 +49,7 @@ class _SplashState extends State<Splash> {
                       child: text3,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(17)),
+                      color: color1,
                     ),
                   )
                 ],
