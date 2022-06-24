@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../style/textstyle.dart';
 
 var text1 = Text(
-  "Find Cozy House\nto Stay and Happy",
+  "FindKoss House\nto Stay and Happy",
   style: Ts1.copyWith(fontSize: 24.0),
 );
 var text2 = Text(
