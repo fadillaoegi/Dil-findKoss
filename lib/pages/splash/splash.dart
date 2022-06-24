@@ -24,7 +24,7 @@ class _SplashState extends State<Splash> {
               padding: EdgeInsets.only(left: 30.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: <Widget>[
                   Container(
                     height: 50,
                     width: 50,

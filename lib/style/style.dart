@@ -1,108 +1,217 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+// Color By Project
+Color color1 = Color(0xff5843BE);
+Color color2 = Color(0xff000000);
+Color color3 = Color(0xff7A7E86);
+Color color4 = Color(0xffffffff);
 
 // SizedBox Height Template by @fdlml_
-var BoxH2 = SizedBox(
+const BoxH2 = SizedBox(
   height: 2,
 );
-var BoxH4 = SizedBox(
+const BoxH4 = SizedBox(
   height: 4,
 );
-var BoxH8 = SizedBox(
+const BoxH8 = SizedBox(
   height: 8,
 );
-var BoxH10 = SizedBox(
+const BoxH10 = SizedBox(
   height: 10,
 );
-var BoxH12 = SizedBox(
+const BoxH12 = SizedBox(
   height: 12,
 );
-var BoxH14 = SizedBox(
+const BoxH14 = SizedBox(
   height: 14,
 );
-var BoxH16 = SizedBox(
+const BoxH16 = SizedBox(
   height: 16,
 );
-var BoxH18 = SizedBox(
+const BoxH18 = SizedBox(
   height: 18,
 );
-var BoxH20 = SizedBox(
+const BoxH20 = SizedBox(
   height: 20,
 );
-var BoxH21 = SizedBox(
+const BoxH21 = SizedBox(
   height: 21,
 );
-var BoxH22 = SizedBox(
+const BoxH22 = SizedBox(
   height: 22,
 );
-var BoxH24 = SizedBox(
+const BoxH24 = SizedBox(
   height: 24,
 );
-var BoxH26 = SizedBox(
+const BoxH26 = SizedBox(
   height: 26,
 );
-var BoxH28 = SizedBox(
+const BoxH28 = SizedBox(
   height: 28,
 );
-var BoxH30 = SizedBox(
+const BoxH30 = SizedBox(
   height: 30,
 );
-var BoxH32 = SizedBox(
+const BoxH32 = SizedBox(
   height: 32,
 );
-var BoxH34 = SizedBox(
+const BoxH34 = SizedBox(
   height: 34,
 );
-var BoxH35 = SizedBox(
+const BoxH35 = SizedBox(
   height: 35,
 );
-var BoxH36 = SizedBox(
+const BoxH36 = SizedBox(
   height: 36,
 );
-var BoxH38 = SizedBox(
+const BoxH38 = SizedBox(
   height: 38,
 );
-var BoxH40 = SizedBox(
+const BoxH40 = SizedBox(
   height: 40,
 );
-var BoxH41 = SizedBox(
+const BoxH41 = SizedBox(
   height: 41,
 );
-var BoxH42 = SizedBox(
+const BoxH42 = SizedBox(
   height: 42,
 );
-var BoxH44 = SizedBox(
+const BoxH44 = SizedBox(
   height: 44,
 );
-var BoxH45 = SizedBox(
+const BoxH45 = SizedBox(
   height: 45,
 );
-var BoxH46 = SizedBox(
+const BoxH46 = SizedBox(
   height: 46,
 );
-var BoxH48 = SizedBox(
+const BoxH48 = SizedBox(
   height: 48,
 );
-var BoxH50 = SizedBox(
+const BoxH50 = SizedBox(
   height: 50,
 );
-var BoxH51 = SizedBox(
+const BoxH51 = SizedBox(
   height: 51,
 );
-var BoxH52 = SizedBox(
+const BoxH52 = SizedBox(
   height: 52,
 );
-var BoxH54 = SizedBox(
+const BoxH54 = SizedBox(
   height: 54,
 );
-var BoxH56 = SizedBox(
+const BoxH56 = SizedBox(
   height: 56,
 );
-var BoxH58 = SizedBox(
+const BoxH58 = SizedBox(
   height: 58,
 );
-var BoxH60 = SizedBox(
+const BoxH60 = SizedBox(
   height: 60,
 );
 
-
 // SizedBox Widht Template by @fdlml_
+
+const BoxW2 = SizedBox(
+  width: 2,
+);
+const BoxW4 = SizedBox(
+  width: 4,
+);
+const BoxW8 = SizedBox(
+  width: 8,
+);
+const BoxW10 = SizedBox(
+  width: 10,
+);
+const BoxW12 = SizedBox(
+  width: 12,
+);
+const BoxW14 = SizedBox(
+  width: 14,
+);
+const BoxW16 = SizedBox(
+  width: 16,
+);
+const BoxW18 = SizedBox(
+  width: 18,
+);
+const BoxW20 = SizedBox(
+  width: 20,
+);
+const BoxW21 = SizedBox(
+  width: 21,
+);
+const BoxW22 = SizedBox(
+  width: 22,
+);
+const BoxW24 = SizedBox(
+  width: 24,
+);
+const BoxW26 = SizedBox(
+  width: 26,
+);
+const BoxW28 = SizedBox(
+  width: 28,
+);
+const BoxW30 = SizedBox(
+  width: 30,
+);
+const BoxW32 = SizedBox(
+  width: 32,
+);
+const BoxW34 = SizedBox(
+  width: 34,
+);
+const BoxW35 = SizedBox(
+  width: 35,
+);
+const BoxW36 = SizedBox(
+  width: 36,
+);
+const BoxW38 = SizedBox(
+  width: 38,
+);
+const BoxW40 = SizedBox(
+  width: 40,
+);
+const BoxW41 = SizedBox(
+  width: 41,
+);
+const BoxW42 = SizedBox(
+  width: 42,
+);
+const BoxW44 = SizedBox(
+  width: 44,
+);
+const BoxW45 = SizedBox(
+  width: 45,
+);
+const BoxW46 = SizedBox(
+  width: 46,
+);
+const BoxW48 = SizedBox(
+  width: 48,
+);
+const BoxW50 = SizedBox(
+  width: 50,
+);
+const BoxW51 = SizedBox(
+  width: 51,
+);
+const BoxW52 = SizedBox(
+  width: 52,
+);
+const BoxW54 = SizedBox(
+  width: 54,
+);
+const BoxW56 = SizedBox(
+  width: 56,
+);
+const BoxW58 = SizedBox(
+  width: 58,
+);
+const BoxW60 = SizedBox(
+  width: 60,
+);
