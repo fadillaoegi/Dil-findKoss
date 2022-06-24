@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../text/textsplash.dart';
 
 class Splash extends StatefulWidget {
   Splash({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       body: SafeArea(
           child: Stack(children: [
+        // Image.asset("assets/images/splash_image.png"),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -35,7 +37,24 @@ class _SplashState extends State<Splash> {
                   SizedBox(
                     height: 30.0,
                   ),
-                  Text("Find Cozy House\nto Stay and Happy")
+                  text1,
+                  SizedBox(
+                    height: 10,
+                  ),
+                  text2,
+                  SizedBox(
+                    height: 40.0,
+                  ),
+                  Container(
+                    width: 210,
+                    height: 50,
+                    child: RaisedButton(
+                      onPressed: () => debugPrint(textDebug),
+                      child: text3,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17)),
+                    ),
+                  )
                 ],
               ),
             )

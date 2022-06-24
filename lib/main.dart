@@ -1,5 +1,6 @@
-import 'package:findkoss/splash/splash.dart';
+
 import 'package:flutter/material.dart';
+import 'pages/splash/splash.dart';
 
 void main() => runApp(const MyApp());
 
