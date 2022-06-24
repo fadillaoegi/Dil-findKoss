@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../text/textsplash.dart';
+import '../../style/style.dart';
 
 class Splash extends StatefulWidget {
   Splash({Key? key}) : super(key: key);
@@ -18,9 +19,7 @@ class _SplashState extends State<Splash> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: 50.0,
-            ),
+            BoxH50,
             Padding(
               padding: EdgeInsets.only(left: 30.0),
               child: Column(
@@ -34,17 +33,11 @@ class _SplashState extends State<Splash> {
                       image: AssetImage("assets/images/logo.png"),
                     )),
                   ),
-                  SizedBox(
-                    height: 30.0,
-                  ),
+                  BoxH30,
                   text1,
-                  SizedBox(
-                    height: 10,
-                  ),
+                  BoxH10,
                   text2,
-                  SizedBox(
-                    height: 40.0,
-                  ),
+                  BoxH40,
                   Container(
                     width: 210,
                     height: 50,
