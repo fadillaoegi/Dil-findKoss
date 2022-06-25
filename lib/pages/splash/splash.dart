@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../text/textsplash.dart';
+import '../home/home.dart';
 import '../../style/style.dart';
 
 class Splash extends StatefulWidget {
@@ -45,7 +46,10 @@ class _SplashState extends State<Splash> {
                     width: 210,
                     height: 50,
                     child: RaisedButton(
-                      onPressed: () => debugPrint(textDebug),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Home()));
+                      },
                       child: text3,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(17)),
