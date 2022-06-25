@@ -9,5 +9,11 @@ var text2 = Text(
   "Mencari kosan yang FindKoss",
   style: Ts3.copyWith(fontSize: 16.0),
 );
-var text3 = Text("Popular Cities");
-var text4 = Text("Tips & Guidance");
+var text3 = Text(
+  "Popular Cities",
+  style: Ts2.copyWith(fontSize: 16),
+);
+var text4 = Text(
+  "Tips & Guidance",
+  style: Ts2.copyWith(fontSize: 16),
+);
