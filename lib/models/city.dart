@@ -1,7 +1,7 @@
 class CityModel {
   int id;
   String name;
-  String imgaeUrl;
+  String imageUrl;
 
-  CityModel(this.id, this.name, this.imgaeUrl);
+  CityModel(this.id, this.name, this.imageUrl);
 }

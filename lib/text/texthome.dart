@@ -17,3 +17,8 @@ var text4 = Text(
   "Tips & Guidance",
   style: Ts2.copyWith(fontSize: 16),
 );
+
+var text5 = Text(
+  "Recommended Space",
+  style: Ts2.copyWith(fontSize: 16),
+);

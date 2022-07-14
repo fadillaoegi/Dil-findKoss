@@ -55,8 +55,24 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
-                    BoxH20,
-                    Text("Tstisvsv")
+                    BoxH30,
+                    text5,
+                    BoxH16,
+                    Container(
+                      height: 200,
+                      child: ListView(
+                        scrollDirection: Axis.vertical,
+                        children: [
+                          Text("Weeeww"),
+                          Text("Sleewbeeww"),
+                          Text("Sleewbeeww"),
+                          Text("Sleewbeeww"),
+                          Text("Sleewbeeww"),
+                          Text("Sleewbeeww"),
+                          Text("Sleewbeeww"),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               )

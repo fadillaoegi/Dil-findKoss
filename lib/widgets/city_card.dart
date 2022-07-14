@@ -1,9 +1,11 @@
+import 'package:findkoss/models/city.dart';
 import 'package:findkoss/style/style.dart';
 import 'package:findkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 
 class cityCard extends StatefulWidget {
-  cityCard({Key? key}) : super(key: key);
+  // CityModel citymodel;
+  // cityCard(this.citymodel);
 
   @override
   State<cityCard> createState() => _cityCardState();
