@@ -1,8 +1,8 @@
+import 'package:findkoss/models/city.dart';
 import 'package:flutter/material.dart';
 import '../../style/style.dart';
 import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
-import '../../models/city.dart';
 
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);
@@ -36,7 +36,10 @@ class _HomeState extends State<Home> {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
-                          cityCard(),
+                          // cityCard(city(
+                          //     id: 1,
+                          //     name: 'Kendari',
+                          //     imageUrl: 'assets/images/city1.png')),
                           BoxW12,
                           cityCard(),
                           BoxW12,
@@ -63,13 +66,14 @@ class _HomeState extends State<Home> {
                       child: ListView(
                         scrollDirection: Axis.vertical,
                         children: [
-                          Text("Weeeww"),
-                          Text("Sleewbeeww"),
-                          Text("Sleewbeeww"),
-                          Text("Sleewbeeww"),
-                          Text("Sleewbeeww"),
-                          Text("Sleewbeeww"),
-                          Text("Sleewbeeww"),
+                          Row(
+                            children: [
+                              Text("Weeeww"),
+                              Text("Sleewbeeww"),
+                              Text("Sleewbeeww"),
+                              Text("Sleewbeeww"),
+                            ],
+                          )
                         ],
                       ),
                     )

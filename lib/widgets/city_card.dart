@@ -2,16 +2,13 @@ import 'package:findkoss/models/city.dart';
 import 'package:findkoss/style/style.dart';
 import 'package:findkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
+import '../models/city.dart';
 
-class cityCard extends StatefulWidget {
-  // CityModel citymodel;
-  // cityCard(this.citymodel);
+class cityCard extends StatelessWidget {
 
-  @override
-  State<cityCard> createState() => _cityCardState();
-}
+  // CityModel city;
+  // cityCard(this.city);
 
-class _cityCardState extends State<cityCard> {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -25,6 +22,7 @@ class _cityCardState extends State<cityCard> {
             children: [
               Image.asset(
                 'assets/images/city1.png',
+                // city.imageUrl,
                 width: 120,
                 height: 102,
                 fit: BoxFit.cover,
@@ -32,6 +30,7 @@ class _cityCardState extends State<cityCard> {
               BoxH24,
               Text(
                 "Surabaya",
+                // city.name,
                 style: Ts1.copyWith(fontSize: 16.0),
               )
             ],
@@ -39,5 +38,6 @@ class _cityCardState extends State<cityCard> {
         ),
       ),
     );
+    ;
   }
 }
