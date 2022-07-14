@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 Color color1 = Color(0xff5843BE);
 Color color2 = Color(0xff000000);
 Color color3 = Color(0xff7A7E86);
-Color color4 = Color(0xffffffff);
+Color color4 = Color(0xfff6f7f8);
 
 // SizedBox Height Template by @fdlml_
 const BoxH2 = SizedBox(
@@ -108,6 +108,9 @@ const BoxH58 = SizedBox(
 );
 const BoxH60 = SizedBox(
   height: 60,
+);
+const BoxH62 = SizedBox(
+  height: 62,
 );
 
 // SizedBox Widht Template by @fdlml_
