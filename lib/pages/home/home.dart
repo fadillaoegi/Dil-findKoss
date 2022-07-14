@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../style/style.dart';
 import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
+import '../../models/city.dart';
 
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);
@@ -35,25 +36,27 @@ class _HomeState extends State<Home> {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
-                          city(),
+                          cityCard(),
                           BoxW12,
-                          city(),
+                          cityCard(),
                           BoxW12,
-                          city(),
+                          cityCard(),
                           BoxW12,
-                          city(),
+                          cityCard(),
                           BoxW12,
-                          city(),
+                          cityCard(),
                           BoxW12,
-                          city(),
+                          cityCard(),
                           BoxW12,
-                          city(),
+                          cityCard(),
                           BoxW12,
-                          city(),
+                          cityCard(),
                           BoxW12,
                         ],
                       ),
-                    )
+                    ),
+                    BoxH20,
+                    Text("Tstisvsv")
                   ],
                 ),
               )
