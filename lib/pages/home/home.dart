@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
                           Row(
                             children: [
                               Text("Weeeww"),
-                              Text("Sleewbeeww"),
+                              Text("Sleewbeewwww"),
                               Text("Sleewbeeww"),
                               Text("Sleewbeeww"),
                             ],
