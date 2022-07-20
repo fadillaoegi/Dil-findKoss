@@ -4,14 +4,9 @@ import '../../style/style.dart';
 import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
 
-class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,8 +35,15 @@ class _HomeState extends State<Home> {
                           //     id: 1,
                           //     name: 'Kendari',
                           //     imageUrl: 'assets/images/city1.png')),
+                          // cityCard(City(
+                          //     id: 1,
+                          //     name: 'Testing',
+                          //     imageUrl: 'assets/images/city1.png')),
                           BoxW12,
-                          cityCard(),
+                          // cityCard(CityModel(
+                          //     id: 1,
+                          //     name: 'Kendari',
+                          //     imageUrl: 'assets/images/city2.png')),
                           BoxW12,
                           cityCard(),
                           BoxW12,

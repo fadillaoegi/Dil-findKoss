@@ -1,13 +1,10 @@
 import 'package:findkoss/models/city.dart';
-import 'package:findkoss/style/style.dart';
-import 'package:findkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
-import '../models/city.dart';
+import '../style/style.dart';
+import '../style/textstyle.dart';
 
 class cityCard extends StatelessWidget {
-
-  // CityModel city;
-  // cityCard(this.city);
+  const cityCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +18,16 @@ class cityCard extends StatelessWidget {
           child: Column(
             children: [
               Image.asset(
-                'assets/images/city1.png',
+                // card.imageUrl,
                 // city.imageUrl,
+                "assets/images/city1.png",
                 width: 120,
                 height: 102,
                 fit: BoxFit.cover,
               ),
               BoxH24,
               Text(
+                // card.name,
                 "Surabaya",
                 // city.name,
                 style: Ts1.copyWith(fontSize: 16.0),
@@ -38,6 +37,5 @@ class cityCard extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

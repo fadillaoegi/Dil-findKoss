@@ -1,7 +1,7 @@
-class CityModel {
+class City {
   int id;
   String name;
   String imageUrl;
 
-  CityModel(this.id, this.name, this.imageUrl);
+  City(this.id, this.name, this.imageUrl);
 }
