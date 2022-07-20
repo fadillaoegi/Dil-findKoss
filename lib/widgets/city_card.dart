@@ -20,11 +20,32 @@ class cityCard extends StatelessWidget {
           color: color4,
           child: Column(
             children: [
-              Image.asset(
-                city.imageUrl,
-                width: 120,
-                height: 102,
-                fit: BoxFit.cover,
+              Stack(
+                children: [
+                  Image.asset(
+                    city.imageUrl,
+                    width: 120,
+                    height: 102,
+                    fit: BoxFit.cover,
+                  ),
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Container(
+                        height: 30,
+                        width: 50,
+                        child: Center(
+                            child: Image.asset(
+                          "assets/images/icon_star.png",
+                          width: 22,
+                          height: 22,
+                        )),
+                        decoration: BoxDecoration(
+                            color: color1,
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(30),
+                            ))),
+                  )
+                ],
               ),
               BoxH24,
               Text(

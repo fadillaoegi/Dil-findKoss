@@ -31,23 +31,23 @@ class Home extends StatelessWidget {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
-                          cityCard(
-                              City(1, 'Kendari', 'assets/images/city1.png')),
+                          cityCard(City(
+                              1, 'Kendari', 'assets/images/city1.png', true)),
                           BoxW12,
-                          cityCard(
-                              City(1, 'Surabaya', 'assets/images/city2.png')),
+                          cityCard(City(
+                              1, 'Surabaya', 'assets/images/city2.png', false)),
                           BoxW12,
-                          cityCard(
-                              City(1, 'Makassar', 'assets/images/city3.png')),
+                          cityCard(City(
+                              1, 'Makassar', 'assets/images/city3.png', false)),
                           BoxW12,
-                          cityCard(
-                              City(1, 'Kendari', 'assets/images/city4.png')),
+                          cityCard(City(
+                              1, 'Palembang', 'assets/images/city4.png', true)),
                           BoxW12,
-                          cityCard(
-                              City(1, 'Kendari', 'assets/images/city5.png')),
+                          cityCard(City(
+                              1, 'Tegal', 'assets/images/city5.png', true)),
                           BoxW12,
-                          cityCard(
-                              City(1, 'Kendari', 'assets/images/city6.png')),
+                          cityCard(City(
+                              1, 'Semarang', 'assets/images/city6.png', false)),
                           BoxW12,
                         ],
                       ),
