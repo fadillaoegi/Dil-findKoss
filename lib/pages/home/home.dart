@@ -60,7 +60,8 @@ class Home extends StatelessWidget {
                       child: ListView(
                         scrollDirection: Axis.vertical,
                         children: [
-                          Row(
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text("Weeeww"),
                               Text("Sleewbeewwww"),

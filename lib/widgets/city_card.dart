@@ -28,23 +28,25 @@ class cityCard extends StatelessWidget {
                     height: 102,
                     fit: BoxFit.cover,
                   ),
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: Container(
-                        height: 30,
-                        width: 50,
-                        child: Center(
-                            child: Image.asset(
-                          "assets/images/icon_star.png",
-                          width: 22,
-                          height: 22,
-                        )),
-                        decoration: BoxDecoration(
-                            color: color1,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(30),
-                            ))),
-                  )
+                  city.popular
+                      ? Align(
+                          alignment: Alignment.topRight,
+                          child: Container(
+                              height: 30,
+                              width: 50,
+                              child: Center(
+                                  child: Image.asset(
+                                "assets/images/icon_star.png",
+                                width: 22,
+                                height: 22,
+                              )),
+                              decoration: BoxDecoration(
+                                  color: color1,
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(30),
+                                  ))),
+                        )
+                      : Container()
                 ],
               ),
               BoxH24,
