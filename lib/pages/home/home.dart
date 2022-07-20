@@ -5,7 +5,7 @@ import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  // const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,31 +31,23 @@ class Home extends StatelessWidget {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
-                          // cityCard(city(
-                          //     id: 1,
-                          //     name: 'Kendari',
-                          //     imageUrl: 'assets/images/city1.png')),
-                          // cityCard(City(
-                          //     id: 1,
-                          //     name: 'Testing',
-                          //     imageUrl: 'assets/images/city1.png')),
+                          cityCard(
+                              City(1, 'Kendari', 'assets/images/city1.png')),
                           BoxW12,
-                          // cityCard(CityModel(
-                          //     id: 1,
-                          //     name: 'Kendari',
-                          //     imageUrl: 'assets/images/city2.png')),
+                          cityCard(
+                              City(1, 'Surabaya', 'assets/images/city2.png')),
                           BoxW12,
-                          cityCard(),
+                          cityCard(
+                              City(1, 'Makassar', 'assets/images/city3.png')),
                           BoxW12,
-                          cityCard(),
+                          cityCard(
+                              City(1, 'Kendari', 'assets/images/city4.png')),
                           BoxW12,
-                          cityCard(),
+                          cityCard(
+                              City(1, 'Kendari', 'assets/images/city5.png')),
                           BoxW12,
-                          cityCard(),
-                          BoxW12,
-                          cityCard(),
-                          BoxW12,
-                          cityCard(),
+                          cityCard(
+                              City(1, 'Kendari', 'assets/images/city6.png')),
                           BoxW12,
                         ],
                       ),
