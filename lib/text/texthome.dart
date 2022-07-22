@@ -3,7 +3,7 @@ import '../style/textstyle.dart';
 
 var text1 = Text(
   "Explore Now",
-  style: Ts1.copyWith(fontSize: 24.0),
+  style: TsBlackBold.copyWith(fontSize: 24.0),
 );
 var text2 = Text(
   "Mencari kosan yang FindKoss",
@@ -11,14 +11,14 @@ var text2 = Text(
 );
 var text3 = Text(
   "Popular Cities",
-  style: Ts2.copyWith(fontSize: 16),
+  style: TsBlackMedium.copyWith(fontSize: 16),
 );
 var text4 = Text(
   "Tips & Guidance",
-  style: Ts2.copyWith(fontSize: 16),
+  style: TsBlackMedium.copyWith(fontSize: 16),
 );
 
 var text5 = Text(
   "Recommended Space",
-  style: Ts2.copyWith(fontSize: 16),
+  style: TsBlackMedium.copyWith(fontSize: 16),
 );

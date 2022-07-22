@@ -53,7 +53,7 @@ class cityCard extends StatelessWidget {
               Text(
                 city.name,
                 // city.name,
-                style: Ts1.copyWith(fontSize: 16.0),
+                style: TsBlackBold.copyWith(fontSize: 16.0),
               )
             ],
           ),

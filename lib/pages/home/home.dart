@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../style/style.dart';
 import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
+import '../../widgets/rekomend_card.dart';
 
 class Home extends StatelessWidget {
   // const Home({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        bottom: false,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,20 +37,19 @@ class Home extends StatelessWidget {
                               1, 'Kendari', 'assets/images/city1.png', true)),
                           BoxW12,
                           cityCard(City(
-                              1, 'Surabaya', 'assets/images/city2.png', false)),
+                              2, 'Surabaya', 'assets/images/city2.png', false)),
                           BoxW12,
                           cityCard(City(
-                              1, 'Makassar', 'assets/images/city3.png', false)),
+                              3, 'Makassar', 'assets/images/city3.png', false)),
                           BoxW12,
                           cityCard(City(
-                              1, 'Palembang', 'assets/images/city4.png', true)),
+                              4, 'Palembang', 'assets/images/city4.png', true)),
                           BoxW12,
                           cityCard(City(
-                              1, 'Tegal', 'assets/images/city5.png', true)),
+                              5, 'Tegal', 'assets/images/city5.png', true)),
                           BoxW12,
                           cityCard(City(
-                              1, 'Semarang', 'assets/images/city6.png', false)),
-                          BoxW12,
+                              6, 'Semarang', 'assets/images/city6.png', false)),
                         ],
                       ),
                     ),
@@ -56,17 +57,21 @@ class Home extends StatelessWidget {
                     text5,
                     BoxH16,
                     Container(
-                      height: 200,
+                      height: 300,
                       child: ListView(
                         scrollDirection: Axis.vertical,
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Weeeww"),
-                              Text("Sleewbeewwww"),
-                              Text("Sleewbeeww"),
-                              Text("Sleewbeeww"),
+                              rekomend(),
+                              BoxH30,
+                              rekomend(),
+                              BoxH30,
+                              rekomend(),
+                              BoxH30,
+                              rekomend(),
+                              BoxH30,
                             ],
                           )
                         ],
