@@ -6,6 +6,8 @@ import '../style/style.dart';
 
 TextStyle Ts3 = GoogleFonts.poppins(fontWeight: FontWeight.w300, color: color3);
 TextStyle Ts4 = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: color1);
+
+
 TextStyle TsBlackBold =
     GoogleFonts.poppins(fontWeight: FontWeight.w500, color: color2);
 TextStyle TsBlackMedium =

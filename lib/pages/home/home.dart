@@ -1,10 +1,14 @@
 import 'package:findkoss/models/city.dart';
+import 'package:findkoss/models/guidance.dart';
 import 'package:findkoss/models/space.dart';
 import 'package:flutter/material.dart';
 import '../../style/style.dart';
 import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
 import '../../widgets/rekomend_card.dart';
+import '../../widgets/guidance_card.dart';
+import '../../models/guidance.dart';
+import '../../widgets/bottomNavItem.dart';
 
 class Home extends StatelessWidget {
   // const Home({Key? key}) : super(key: key);
@@ -27,6 +31,7 @@ class Home extends StatelessWidget {
                     BoxH2,
                     text2,
                     BoxH30,
+                    // NOTE: Popular City
                     text3,
                     BoxH16,
                     Container(
@@ -55,6 +60,7 @@ class Home extends StatelessWidget {
                       ),
                     ),
                     BoxH30,
+                    // NOTE Recommended Space
                     text5,
                     BoxH16,
                     Container(
@@ -105,8 +111,34 @@ class Home extends StatelessWidget {
                           )
                         ],
                       ),
+                    ),
+                    BoxH30,
+                    // NOTE: Tips & Guidance
+                    text4,
+                    BoxH20,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        guidance_card(guidance(1, 'City Guidelines',
+                            'assets/images/tips1.png', '20 Apr')),
+                        BoxH30,
+                        guidance_card(guidance(2, 'Jakarta Fairship',
+                            'assets/images/tips2.png', '11 Dec')),
+                        BoxH30,
+                      ],
                     )
                   ],
+                ),
+              ),
+              BoxH50,
+              Container(
+                height: 65,
+                margin: EdgeInsets.symmetric(horizontal: 12),
+                decoration: BoxDecoration(
+                    color: Colors.black54,
+                    borderRadius: BorderRadius.circular(30)),
+                child: Row(
+                  children: [bottomNavItem()],
                 ),
               )
             ],
