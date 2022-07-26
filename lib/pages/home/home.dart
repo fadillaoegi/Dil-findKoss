@@ -135,7 +135,7 @@ class Home extends StatelessWidget {
                 height: 65,
                 margin: EdgeInsets.symmetric(horizontal: 12),
                 decoration: BoxDecoration(
-                    color: Colors.black54,
+                    color: Colors.pinkAccent,
                     borderRadius: BorderRadius.circular(30)),
                 child: Row(
                   children: [bottomNavItem()],
