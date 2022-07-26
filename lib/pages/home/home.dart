@@ -131,20 +131,27 @@ class Home extends StatelessWidget {
                 ),
               ),
               BoxH50,
-              Container(
-                height: 65,
-                margin: EdgeInsets.symmetric(horizontal: 12),
-                decoration: BoxDecoration(
-                    color: Colors.pinkAccent,
-                    borderRadius: BorderRadius.circular(30)),
-                child: Row(
-                  children: [bottomNavItem()],
-                ),
-              )
+              BoxH20
             ],
           ),
         ),
       ),
+      floatingActionButton: Container(
+        height: 65,
+        margin: EdgeInsets.symmetric(horizontal: 18),
+        decoration: BoxDecoration(
+            color: Colors.pinkAccent, borderRadius: BorderRadius.circular(30)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            bottomNavItem(true, 'assets/images/icon_home.png'),
+            bottomNavItem(false, 'assets/images/icon_email.png'),
+            bottomNavItem(false, 'assets/images/icon_card.png'),
+            bottomNavItem(false, 'assets/images/icon_love.png'),
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
