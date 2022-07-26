@@ -1,9 +1,13 @@
+import 'package:findkoss/models/space.dart';
 import 'package:findkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../style/style.dart';
+import '../models/space.dart';
 
 class rekomend extends StatelessWidget {
-  const rekomend({Key? key}) : super(key: key);
+  // const rekomend({Key? key}) : super(key: key);
+  final Space spaceModel;
+  rekomend(this.spaceModel);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +20,7 @@ class rekomend extends StatelessWidget {
             width: 130,
             child: Stack(children: [
               Image.asset(
-                "assets/images/space1.png",
+                spaceModel.imageUrl,
               ),
               Align(
                 alignment: Alignment.topRight,
@@ -33,7 +37,7 @@ class rekomend extends StatelessWidget {
                             height: 22,
                           ),
                           Text(
-                            "4/5",
+                            spaceModel.rating.toString(),
                             style: TsWhiteMedium.copyWith(fontSize: 13),
                           )
                         ])),
@@ -52,13 +56,13 @@ class rekomend extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Kuretakeso Hott",
+                spaceModel.name,
                 style: TsBlackMedium.copyWith(fontSize: 18),
               ),
               BoxH2,
               Text.rich(
                 TextSpan(
-                    text: "\$52 ",
+                    text: "\$ ${spaceModel.price} ",
                     style: Ts4.copyWith(fontSize: 16),
                     children: [
                       TextSpan(
@@ -67,7 +71,7 @@ class rekomend extends StatelessWidget {
               ),
               BoxH16,
               Text(
-                "Bandung, Germany",
+                "${spaceModel.city}, ${spaceModel.country}",
                 style: Ts3.copyWith(fontSize: 14),
               ),
             ],

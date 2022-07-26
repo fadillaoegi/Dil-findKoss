@@ -1,4 +1,5 @@
 import 'package:findkoss/models/city.dart';
+import 'package:findkoss/models/space.dart';
 import 'package:flutter/material.dart';
 import '../../style/style.dart';
 import '../../text/texthome.dart';
@@ -64,13 +65,41 @@ class Home extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              rekomend(),
+                              rekomend(Space(
+                                  1,
+                                  'Lippo',
+                                  'assets/images/space1.png',
+                                  56,
+                                  'Surabaya',
+                                  'Jawa Timur',
+                                  4.5)),
                               BoxH30,
-                              rekomend(),
+                              rekomend(Space(
+                                  2,
+                                  'Morini',
+                                  'assets/images/space2.png',
+                                  58,
+                                  'Kendari',
+                                  'Sulawesi Tenggara',
+                                  4.5)),
                               BoxH30,
-                              rekomend(),
+                              rekomend(Space(
+                                  3,
+                                  'Momaka',
+                                  'assets/images/space3.png',
+                                  46,
+                                  'Tegal',
+                                  'Jawa Tengah',
+                                  4.5)),
                               BoxH30,
-                              rekomend(),
+                              rekomend(Space(
+                                  4,
+                                  'Merdeka',
+                                  'assets/images/space1.png',
+                                  33,
+                                  'Jakarta Selatan',
+                                  'Jawa Barat',
+                                  4.5)),
                               BoxH30,
                             ],
                           )

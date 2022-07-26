@@ -11,6 +11,6 @@ var text2 = Text(
 );
 var text3 = Text(
   "Explore Now",
-  style: TsBlackBold.copyWith(fontSize: 18.0),
+  style: TsWhiteBold.copyWith(fontSize: 18.0),
 );
 var textDebug = "ButtonSplash Di pencet";
