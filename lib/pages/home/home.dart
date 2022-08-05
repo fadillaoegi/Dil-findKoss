@@ -77,7 +77,7 @@ class Home extends StatelessWidget {
                                   'assets/images/space1.png',
                                   56,
                                   'Surabaya',
-                                  'Jawa Timur',
+                                  'Jawa Timuur',
                                   4.5)),
                               BoxH30,
                               rekomend(Space(
