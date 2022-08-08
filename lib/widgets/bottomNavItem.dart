@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../style/style.dart';
 
-class bottomNavItem extends StatelessWidget {
+class BottomNavItem extends StatelessWidget {
   // const bottomNavItem({Key? key}) : super(key: key);
   final String imageUrl;
   final bool aktif;
 
-  bottomNavItem(this.aktif, this.imageUrl);
+  BottomNavItem(this.aktif, this.imageUrl);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class bottomNavItem extends StatelessWidget {
                 width: 30,
                 height: 2,
                 decoration: BoxDecoration(
-                    color: color1,
+                    color: colorPurple,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(1000))),
               )

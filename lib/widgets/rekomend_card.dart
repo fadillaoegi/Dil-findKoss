@@ -42,7 +42,7 @@ class rekomend extends StatelessWidget {
                           )
                         ])),
                     decoration: BoxDecoration(
-                        color: color1,
+                        color: colorPurple,
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(30),
                         ))),

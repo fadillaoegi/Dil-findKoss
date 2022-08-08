@@ -53,7 +53,7 @@ class _SplashState extends State<Splash> {
                       child: text3,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(17)),
-                      color: color1,
+                      color: colorPurple,
                     ),
                   )
                 ],

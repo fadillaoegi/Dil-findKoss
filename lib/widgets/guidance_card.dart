@@ -40,7 +40,7 @@ class guidance_card extends StatelessWidget {
                 onPressed: () {},
                 icon: Icon(
                   Icons.chevron_right,
-                  color: color3,
+                  color: colorGrey,
                 )))
       ],
     );

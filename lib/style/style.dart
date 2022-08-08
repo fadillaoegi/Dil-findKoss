@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 // Color By Project
-Color color1 = Color(0xff5843BE);
-Color color2 = Color(0xff000000);
-Color color3 = Color(0xff7A7E86);
-Color color4 = Color(0xfff6f7f8);
+Color colorPurple = Color(0xff5843BE);
+Color colorBlack = Color(0xff000000);
+Color colorGrey = Color(0xff7A7E86);
+Color colorWhite = Color(0xfff6f7f8);
 
 // SizedBox Height Template by @fdlml_
 const BoxH2 = SizedBox(

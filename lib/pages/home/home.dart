@@ -140,14 +140,14 @@ class Home extends StatelessWidget {
         height: 65,
         margin: EdgeInsets.symmetric(horizontal: 18),
         decoration: BoxDecoration(
-            color: color4, borderRadius: BorderRadius.circular(30)),
+            color: colorWhite, borderRadius: BorderRadius.circular(30)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            bottomNavItem(true, 'assets/images/icon_home.png'),
-            bottomNavItem(false, 'assets/images/icon_email.png'),
-            bottomNavItem(false, 'assets/images/icon_card.png'),
-            bottomNavItem(false, 'assets/images/icon_love.png'),
+            BottomNavItem(true, 'assets/images/icon_home.png'),
+            BottomNavItem(false, 'assets/images/icon_email.png'),
+            BottomNavItem(false, 'assets/images/icon_card.png'),
+            BottomNavItem(false, 'assets/images/icon_love.png'),
           ],
         ),
       ),

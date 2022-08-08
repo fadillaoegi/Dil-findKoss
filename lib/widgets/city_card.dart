@@ -17,7 +17,7 @@ class cityCard extends StatelessWidget {
         child: Container(
           height: 150,
           width: 120,
-          color: color4,
+          color: colorWhite,
           child: Column(
             children: [
               Stack(
@@ -41,7 +41,7 @@ class cityCard extends StatelessWidget {
                                 height: 22,
                               )),
                               decoration: BoxDecoration(
-                                  color: color1,
+                                  color: colorPurple,
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(30),
                                   ))),
