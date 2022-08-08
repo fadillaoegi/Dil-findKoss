@@ -54,8 +54,8 @@ class Home extends StatelessWidget {
                           cityCard(City(
                               5, 'Tegal', 'assets/images/city5.png', true)),
                           BoxW12,
-                          cityCard(City(
-                              6, 'Semaraang', 'assets/images/city6.png', false)),
+                          cityCard(City(6, 'Semaraang',
+                              'assets/images/city6.png', false)),
                         ],
                       ),
                     ),
@@ -140,7 +140,7 @@ class Home extends StatelessWidget {
         height: 65,
         margin: EdgeInsets.symmetric(horizontal: 18),
         decoration: BoxDecoration(
-            color: Colors.pinkAccent, borderRadius: BorderRadius.circular(30)),
+            color: color4, borderRadius: BorderRadius.circular(30)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
