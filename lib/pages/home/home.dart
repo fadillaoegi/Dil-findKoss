@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
                               4, 'Palembang', 'assets/images/city4.png', true)),
                           BoxW12,
                           cityCard(City(
-                              5, 'Tegal', 'assets/images/city5.png', true)),
+                              5, 'Tegaal', 'assets/images/city5.png', true)),
                           BoxW12,
                           cityCard(City(6, 'Semaraang',
                               'assets/images/city6.png', false)),
