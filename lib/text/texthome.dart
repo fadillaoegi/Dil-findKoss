@@ -6,7 +6,7 @@ var text1 = Text(
   style: TsBlackBold.copyWith(fontSize: 24.0),
 );
 var text2 = Text(
-  "Mencari kosan yang FindKoss",
+  "Mencari kosan yang FindKosss",
   style: Ts3.copyWith(fontSize: 16.0),
 );
 var text3 = Text(
