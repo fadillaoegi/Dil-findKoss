@@ -107,6 +107,14 @@ class Home extends StatelessWidget {
                                   'Jawa Barat',
                                   4.5)),
                               BoxH30,
+                              rekomend(Space(
+                                  5,
+                                  'Merdeka',
+                                  'assets/images/space1.png',
+                                  33,
+                                  'Jakarta Selatan',
+                                  'Jawa Barat',
+                                  4.5)),
                             ],
                           )
                         ],
