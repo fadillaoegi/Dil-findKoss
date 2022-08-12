@@ -1,5 +1,6 @@
 import 'package:findkoss/style/style.dart';
 import 'package:findkoss/style/textstyle.dart';
+import 'package:findkoss/widgets/facility_item.dart';
 import 'package:flutter/material.dart';
 import '';
 
@@ -60,7 +61,10 @@ class Detail extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Kuretakeso Hott"),
+                          Text(
+                            "Kuretakeso Hott",
+                            style: TsBlackBold.copyWith(fontSize: 22.0),
+                          ),
                           Row(
                             children: [
                               Image.asset(
@@ -108,32 +112,15 @@ class Detail extends StatelessWidget {
                             ]),
                       ),
                       BoxH30,
-                      Text("Main Facilities"),
+                      Text(
+                        "Main Facilities",
+                        style: TsBlackMedium.copyWith(fontSize: 16.0),
+                      ),
                       BoxH12,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image.asset(
-                                'assets/images/icon_kitchen.png',
-                                width: 32.0,
-                              ),
-                              BoxH8,
-                              Text.rich(
-                                TextSpan(
-                                    // text: "\$ ${spaceModel.price} ",
-                                    text: "2",
-                                    style: Ts4.copyWith(fontSize: 16),
-                                    children: [
-                                      TextSpan(
-                                          text: " Kitchen",
-                                          style: Ts3.copyWith(fontSize: 16))
-                                    ]),
-                              ),
-                            ],
-                          ),
+                          // FacilityItem(),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -179,7 +166,8 @@ class Detail extends StatelessWidget {
                         ],
                       ),
                       BoxH30,
-                      Text("Photos"),
+                      Text("Photos",
+                          style: TsBlackMedium.copyWith(fontSize: 16.0)),
                       BoxH12,
                       Row(
                         children: [
