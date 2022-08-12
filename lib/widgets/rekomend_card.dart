@@ -1,5 +1,5 @@
 import 'package:findkoss/models/space.dart';
-import 'package:findkoss/pages/detail/detail.dart';
+import 'package:findkoss/pages/detail/detailPage.dart';
 import 'package:findkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../style/style.dart';
