@@ -16,17 +16,20 @@ class FacilityItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image.asset(
-          'assets/images/icon_kitchen.png',
+          // 'assets/images/icon_kitchen.png',
+          modelFacility.urlImage,
           width: 32.0,
         ),
         BoxH8,
         Text.rich(
           TextSpan(
-              // text: "\$ ${spaceModel.price} ",
-              text: "2",
+              text: "${modelFacility.jml} ",
+              // text: "2",
               style: Ts4.copyWith(fontSize: 16),
               children: [
-                TextSpan(text: " Kitchen", style: Ts3.copyWith(fontSize: 16))
+                TextSpan(
+                    text: " ${modelFacility.nama}",
+                    style: Ts3.copyWith(fontSize: 16))
               ]),
         ),
       ],
