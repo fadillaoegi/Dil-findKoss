@@ -3,10 +3,20 @@ import 'package:findkoss/style/style.dart';
 import 'package:findkoss/style/textstyle.dart';
 import 'package:findkoss/widgets/facility_item.dart';
 import 'package:flutter/material.dart';
-import '';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+// import 'package:';
 
 class Detail extends StatelessWidget {
   const Detail({Key? key}) : super(key: key);
+
+  lauchUrl(String url) async {
+    if (await canLaunch(url)) {
+      lauchUrl(url);
+    } else {
+      throw (url);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -161,9 +171,17 @@ class Detail extends StatelessWidget {
                             "Jln. Kappan Sukses No. 20\nPalembang",
                             style: Ts3.copyWith(fontSize: 14.0),
                           ),
-                          Image.asset(
-                            "assets/images/btn_map.png",
-                            width: 40.0,
+                          InkWell(
+                            onTap: (() {
+                              // launchUrl(
+                              //   'https://goo.gl/maps/9TjHRcRfDtCkUiLSA');
+                              launchUrlString(
+                                  'https://goo.gl/maps/9TjHRcRfDtCkUiLSA');
+                            }),
+                            child: Image.asset(
+                              "assets/images/btn_map.png",
+                              width: 40.0,
+                            ),
                           )
                         ],
                       ),
@@ -172,7 +190,9 @@ class Detail extends StatelessWidget {
                           height: 50,
                           width: MediaQuery.of(context).size.width,
                           child: RaisedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              launchUrlString('tel://+6285211119246');
+                            },
                             color: colorPurple,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(14.0)),
