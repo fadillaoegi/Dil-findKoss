@@ -11,7 +11,7 @@ class Detail extends StatelessWidget {
   const Detail({Key? key}) : super(key: key);
 
   lauchUrl(String url) async {
-    if (await canLaunch(url)) {
+    if (await canLaunchUrlString(url)) {
       lauchUrl(url);
     } else {
       throw (url);
@@ -52,7 +52,7 @@ class Detail extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Kuretakeso Hott",
+                            "Lippo",
                             style: TsBlackBold.copyWith(fontSize: 22.0),
                           ),
                           Row(

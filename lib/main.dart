@@ -1,3 +1,4 @@
+import 'package:findkoss/pages/calling.dart';
 import 'package:findkoss/pages/pageNotFound.dart';
 import 'package:flutter/material.dart';
 import 'pages/splash/splash.dart';
@@ -17,6 +18,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: NotFound());
+        home: Splash());
   }
 }

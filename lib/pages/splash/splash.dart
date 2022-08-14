@@ -47,7 +47,7 @@ class _SplashState extends State<Splash> {
                     height: 50,
                     child: RaisedButton(
                       onPressed: () {
-                        Navigator.push(context,
+                        Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) => Home()));
                       },
                       child: text3,
