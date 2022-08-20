@@ -39,7 +39,7 @@ class _CallingState extends State<Calling> {
                       height: 6.0,
                     ),
                     Text(
-                      "12 : 30 minutes",
+                      "12 : 30 minutess",
                       style: TsBlackMedium.copyWith(fontSize: 16.0),
                     ),
                     BoxH30,
