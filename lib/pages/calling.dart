@@ -28,14 +28,14 @@ class _CallingState extends State<Calling> {
                       width: 150.0,
                       height: 150.0,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 65.0,
                     ),
                     Text(
                       "Shofa Nabila Alifa",
                       style: TsBlackBold.copyWith(fontSize: 20.0),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 6.0,
                     ),
                     Text(
