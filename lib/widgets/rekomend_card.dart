@@ -26,7 +26,7 @@ class rekomend extends StatelessWidget {
               width: 130,
               child: Stack(children: [
                 Image.asset(
-                  spaceModel.imageUrl,
+                  spaceModel.imageUrl!,
                 ),
                 Align(
                   alignment: Alignment.topRight,
@@ -62,7 +62,7 @@ class rekomend extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  spaceModel.name,
+                  spaceModel.name!,
                   style: TsBlackMedium.copyWith(fontSize: 18),
                 ),
                 BoxH2,

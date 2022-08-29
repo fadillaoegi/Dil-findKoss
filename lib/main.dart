@@ -1,6 +1,8 @@
 import 'package:findkoss/pages/calling.dart';
 import 'package:findkoss/pages/pageNotFound.dart';
+import 'package:findkoss/providers/space_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'pages/splash/splash.dart';
 import 'Testing/learn.dart';
 import 'pages/home/home.dart';
@@ -13,11 +15,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'FindKoss',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: Splash());
+    return ChangeNotifierProvider(
+      create: (context) => SpaceProvider(),
+      child: MaterialApp(
+          title: 'FindKoss',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          home: Splash()),
+    );
   }
 }

@@ -11,31 +11,31 @@ String spaceToJson(Space data) => json.encode(data.toJson());
 class Space {
   Space({
     required this.id,
-    required this.price,
-    required this.numberOfKitchen,
-    required this.numberOfBedRooms,
-    required this.numberOfClipBoard,
-    required this.phone,
-    required this.imageUrl,
-    required this.mapUrl,
-    required this.name,
-    required this.country,
-    required this.rating,
-    required this.city,
+    this.price,
+    this.numberOfKitchen,
+    this.numberOfBedRooms,
+    this.numberOfClipBoard,
+    this.phone,
+    this.imageUrl,
+    this.mapUrl,
+    this.name,
+    this.country,
+    this.rating,
+    this.city,
   });
 
   int id;
-  int price;
-  int numberOfKitchen;
-  int numberOfBedRooms;
-  int numberOfClipBoard;
-  String phone;
-  String imageUrl;
-  String mapUrl;
-  String name;
-  String country;
-  double rating;
-  String city;
+  int? price;
+  int? numberOfKitchen;
+  int? numberOfBedRooms;
+  int? numberOfClipBoard;
+  String? phone;
+  String? imageUrl;
+  String? mapUrl;
+  String? name;
+  String? country;
+  double? rating;
+  String? city;
 
   factory Space.fromJson(Map<String, dynamic> json) => Space(
         id: json["id"],

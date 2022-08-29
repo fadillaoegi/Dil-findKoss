@@ -1,7 +1,9 @@
 import 'package:findkoss/models/city.dart';
 import 'package:findkoss/models/guidance.dart';
 import 'package:findkoss/models/space.dart';
+import 'package:findkoss/providers/space_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../style/style.dart';
 import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
@@ -11,10 +13,12 @@ import '../../models/guidance.dart';
 import '../../widgets/bottomNavItem.dart';
 
 class Home extends StatelessWidget {
-  // const Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var spaceProvider = Provider.of<SpaceProvider>(context);
+    spaceProvider.getApiRecomendedSpace();
     return Scaffold(
       body: SafeArea(
         bottom: false,
@@ -72,49 +76,40 @@ class Home extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               rekomend(Space(
-                                  1,
-                                  'Lippo',
-                                  'assets/images/space1.png',
-                                  56,
-                                  'Surabaya',
-                                  'Jawa Timuur',
-                                  4.5)),
+                                  id: 1,
+                                  name: 'Lippo',
+                                  imageUrl: 'assets/images/space1.png',
+                                  price: 56,
+                                  city: 'Surabaya',
+                                  country: 'Jawa Timuur',
+                                  rating: 4.5)),
                               BoxH30,
                               rekomend(Space(
-                                  2,
-                                  'Morini',
-                                  'assets/images/space2.png',
-                                  58,
-                                  'Kendari',
-                                  'Sulawesi Tenggara',
-                                  4.5)),
+                                  id: 2,
+                                  name: 'Morini',
+                                  imageUrl: 'assets/images/space2.png',
+                                  price: 58,
+                                  city: 'Kendari',
+                                  country: 'Sulawesi Tenggara',
+                                  rating: 4.5)),
                               BoxH30,
                               rekomend(Space(
-                                  3,
-                                  'Momaka',
-                                  'assets/images/space3.png',
-                                  46,
-                                  'Tegal',
-                                  'Jawa Tengah',
-                                  4.5)),
+                                  id: 3,
+                                  name: 'Momaka',
+                                  imageUrl: 'assets/images/space3.png',
+                                  price: 46,
+                                  city: 'Jakarta Selatan',
+                                  country: 'Jawa Barat',
+                                  rating: 4.5)),
                               BoxH30,
                               rekomend(Space(
-                                  4,
-                                  'Merdeka',
-                                  'assets/images/space1.png',
-                                  33,
-                                  'Jakarta Selatan',
-                                  'Jawa Barat',
-                                  4.5)),
-                              BoxH30,
-                              rekomend(Space(
-                                  5,
-                                  'Merdeka',
-                                  'assets/images/space1.png',
-                                  33,
-                                  'Jakarta Selatan',
-                                  'Jawa Barat',
-                                  4.5)),
+                                  id: 3,
+                                  name: 'Merdeka',
+                                  imageUrl: 'assets/images/space1.png',
+                                  price: 33,
+                                  city: 'Tegal',
+                                  country: 'Jawa tengah',
+                                  rating: 4.5)),
                             ],
                           )
                         ],
