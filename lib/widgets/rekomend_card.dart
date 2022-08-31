@@ -8,7 +8,7 @@ import '../models/space.dart';
 class rekomend extends StatelessWidget {
   // const rekomend({Key? key}) : super(key: key);
   final Space spaceModel;
-  rekomend(this.spaceModel);
+  const rekomend(this.spaceModel);
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class rekomend extends StatelessWidget {
                           ])),
                       decoration: BoxDecoration(
                           color: colorPurple,
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(30),
                           ))),
                 )

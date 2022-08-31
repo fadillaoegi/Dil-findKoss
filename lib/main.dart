@@ -1,11 +1,7 @@
-import 'package:findkoss/pages/calling.dart';
-import 'package:findkoss/pages/pageNotFound.dart';
 import 'package:findkoss/providers/space_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'pages/splash/splash.dart';
-import 'Testing/learn.dart';
-import 'pages/home/home.dart';
 
 void main() => runApp(const MyApp());
 
