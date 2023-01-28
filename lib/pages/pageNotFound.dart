@@ -44,15 +44,12 @@ class _NotFoundState extends State<NotFound> {
                   SizedBox(
                     height: 94.0,
                   ),
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text(
                       "Back To Home",
                       style: TsWhiteBold,
                     ),
                     onPressed: () {},
-                    color: colorPurple,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12)),
                   )
                 ],
               ),

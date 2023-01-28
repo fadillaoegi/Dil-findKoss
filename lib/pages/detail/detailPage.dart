@@ -189,13 +189,10 @@ class Detail extends StatelessWidget {
                       Container(
                           height: 50,
                           width: MediaQuery.of(context).size.width,
-                          child: RaisedButton(
+                          child: ElevatedButton(
                             onPressed: () {
                               launchUrlString('tel://+6285211119246');
                             },
-                            color: colorPurple,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(14.0)),
                             child: Text(
                               "Book Now",
                               style: TsWhiteBold.copyWith(
