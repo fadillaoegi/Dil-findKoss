@@ -45,15 +45,12 @@ class _SplashState extends State<Splash> {
                   Container(
                     width: 210,
                     height: 50,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) => Home()));
                       },
                       child: text3,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(17)),
-                      color: colorPurple,
                     ),
                   )
                 ],
