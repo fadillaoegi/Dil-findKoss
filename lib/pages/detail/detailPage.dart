@@ -3,7 +3,6 @@ import 'package:findkoss/style/style.dart';
 import 'package:findkoss/style/textstyle.dart';
 import 'package:findkoss/widgets/facility_item.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 // import 'package:';
 
