@@ -25,14 +25,14 @@ class _SplashState extends State<Splash> {
           children: [
             BoxH50,
             Padding(
-              padding: EdgeInsets.only(left: 30.0),
+              padding: const EdgeInsets.only(left: 30.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Container(
                     height: 50,
                     width: 50,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         image: DecorationImage(
                       image: AssetImage("assets/images/logo.png"),
                     )),
@@ -48,7 +48,7 @@ class _SplashState extends State<Splash> {
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (context) => Home()));
+                            MaterialPageRoute(builder: (context) => const Home()));
                       },
                       child: text3,
                     ),

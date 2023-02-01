@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => SpaceProvider(),
       child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'FindKoss',
           theme: ThemeData(
             primarySwatch: Colors.blue,

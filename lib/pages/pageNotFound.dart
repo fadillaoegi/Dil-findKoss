@@ -3,7 +3,7 @@ import 'package:findkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 
 class NotFound extends StatefulWidget {
-  NotFound({Key? key}) : super(key: key);
+  const NotFound({Key? key}) : super(key: key);
 
   @override
   State<NotFound> createState() => _NotFoundState();
@@ -41,7 +41,7 @@ class _NotFoundState extends State<NotFound> {
                     "requested is already gone",
                     style: Ts3.copyWith(fontSize: 16.0),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 94.0,
                   ),
                   ElevatedButton(
