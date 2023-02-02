@@ -13,8 +13,8 @@ class SpaceProvider extends ChangeNotifier {
       ),
     );
 
-    // print(result.statusCode);
-    // print(result.body);
+    print(result.statusCode);
+    print(result.body);
 
     if (result.statusCode == 200) {
       List data = jsonDecode(result.body);
