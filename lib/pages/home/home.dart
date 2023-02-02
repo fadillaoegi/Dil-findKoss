@@ -9,7 +9,6 @@ import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
 import '../../widgets/rekomend_card.dart';
 import '../../widgets/guidance_card.dart';
-import '../../models/guidance.dart';
 import '../../widgets/bottomNavItem.dart';
 
 class Home extends StatelessWidget {
@@ -155,7 +154,7 @@ class Home extends StatelessWidget {
       ),
       floatingActionButton: Container(
         height: 65,
-        margin: EdgeInsets.symmetric(horizontal: 18),
+        margin: const EdgeInsets.symmetric(horizontal: 18),
         decoration: BoxDecoration(
             color: colorWhite, borderRadius: BorderRadius.circular(30)),
         child: Row(
