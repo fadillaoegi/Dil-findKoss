@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       create: (context) => SpaceProvider(),
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'FindKoss',
+          title: 'FindKosss',
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
