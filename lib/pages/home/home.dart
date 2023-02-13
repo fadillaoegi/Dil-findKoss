@@ -66,7 +66,7 @@ class Home extends StatelessWidget {
                     // NOTE Recommended Space
                     text5,
                     BoxH16,
-                    Container(
+                    SizedBox(
                       height: 300,
                       child: ListView(
                         scrollDirection: Axis.vertical,
@@ -83,7 +83,7 @@ class Home extends StatelessWidget {
                                     // data.map((e) => rekomend(Space(e))).toList(),
                                     rekomend(Space(
                                         id: 1,
-                                        name: 'Lippo',
+                                        name: 'Lippoo',
                                         imageUrl: 'assets/images/space1.png',
                                         price: 56,
                                         city: 'Surabaya',
