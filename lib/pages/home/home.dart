@@ -38,12 +38,13 @@ class Home extends StatelessWidget {
                     text3,
                     BoxH16,
                     Container(
+                      margin: const EdgeInsets.all(0),
                       height: 150,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
                           cityCard(City(
-                              1, 'Kendari', 'assets/images/city1.png', true)),
+                              1, 'Kendarrii', 'assets/images/city1.png', true)),
                           BoxW12,
                           cityCard(City(
                               2, 'Surabaya', 'assets/images/city2.png', false)),
