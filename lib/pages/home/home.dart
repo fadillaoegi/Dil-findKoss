@@ -44,7 +44,7 @@ class Home extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         children: [
                           cityCard(City(
-                              1, 'Kendarrii', 'assets/images/city1.png', true)),
+                              1, 'Kendari', 'assets/images/city1.png', true)),
                           BoxW12,
                           cityCard(City(
                               2, 'Surabayaa', 'assets/images/city2.png', false)),
