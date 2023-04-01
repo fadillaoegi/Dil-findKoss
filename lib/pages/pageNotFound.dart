@@ -41,18 +41,18 @@ class _NotFoundState extends State<NotFound> {
                     "requested is already gone",
                     style: Ts3.copyWith(fontSize: 16.0),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 94.0,
                   ),
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text(
                       "Back To Home",
                       style: TsWhiteBold,
                     ),
                     onPressed: () {},
-                    color: colorPurple,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12)),
+                    // color: colorPurple,
+                    // shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(12)),
                   )
                 ],
               ),

@@ -3,14 +3,9 @@ import '../../text/textsplash.dart';
 import '../home/home.dart';
 import '../../style/style.dart';
 
-class Splash extends StatefulWidget {
+class Splash extends StatelessWidget {
   Splash({Key? key}) : super(key: key);
 
-  @override
-  State<Splash> createState() => _SplashState();
-}
-
-class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +27,7 @@ class _SplashState extends State<Splash> {
                   Container(
                     height: 50,
                     width: 50,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         image: DecorationImage(
                       image: AssetImage("assets/images/logo.png"),
                     )),
@@ -42,18 +37,18 @@ class _SplashState extends State<Splash> {
                   BoxH10,
                   text2,
                   BoxH40,
-                  Container(
+                  SizedBox(
                     width: 210,
                     height: 50,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) => Home()));
                       },
                       child: text3,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(17)),
-                      color: colorPurple,
+                      // shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(17)),
+                      // color: colorPurple,
                     ),
                   )
                 ],

@@ -14,7 +14,7 @@ class Space {
   int? numberOfBedrooms;
   int? numberOfCupboards;
 
-  Space({
+  Space(e, {
     this.city,
     this.country,
     this.id,

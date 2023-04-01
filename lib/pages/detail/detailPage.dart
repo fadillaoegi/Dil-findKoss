@@ -32,7 +32,7 @@ class Detail extends StatelessWidget {
           ),
           ListView(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 327.0,
               ),
               Container(
@@ -124,7 +124,7 @@ class Detail extends StatelessWidget {
                       Text("Photos",
                           style: TsBlackMedium.copyWith(fontSize: 16.0)),
                       BoxH12,
-                      Container(
+                      SizedBox(
                         height: 88,
                         child: ListView(
                           children: [
@@ -186,16 +186,17 @@ class Detail extends StatelessWidget {
                         ],
                       ),
                       BoxH40,
-                      Container(
+                      SizedBox(
                           height: 50,
                           width: MediaQuery.of(context).size.width,
-                          child: RaisedButton(
+                          child: 
+                          ElevatedButton(
                             onPressed: () {
                               launchUrlString('tel://+6285211119246');
                             },
-                            color: colorPurple,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(14.0)),
+                            // color: colorPurple,
+                            // shape: RoundedRectangleBorder(
+                            //     borderRadius: BorderRadius.circular(14.0)),
                             child: Text(
                               "Book Now",
                               style: TsWhiteBold.copyWith(

@@ -9,7 +9,6 @@ import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
 import '../../widgets/rekomend_card.dart';
 import '../../widgets/guidance_card.dart';
-import '../../models/guidance.dart';
 import '../../widgets/bottomNavItem.dart';
 
 class Home extends StatelessWidget {
@@ -72,60 +71,60 @@ class Home extends StatelessWidget {
                       child: ListView(
                         scrollDirection: Axis.vertical,
                         children: [
-                          FutureBuilder(
-                            future: spaceProvider.getApiRecomendedSpace(),
-                            builder: ((context, snapshot) {
-                              if (snapshot.hasData) {
-                                // List<Space> data = snapshot.data;
-                                int index = 0;
-                                return Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    // data.map((e) => rekomend(Space(e))).toList(),
-                                    rekomend(Space(
-                                        id: 1,
-                                        name: 'Lippo',
-                                        imageUrl: 'assets/images/space1.png',
-                                        price: 56,
-                                        city: 'Surabaya',
-                                        country: 'Jawa Timuur',
-                                        rating: 45)),
-                                    BoxH30,
-                                    rekomend(Space(
-                                        id: 2,
-                                        name: 'Morini',
-                                        imageUrl: 'assets/images/space2.png',
-                                        price: 58,
-                                        city: 'Kendari',
-                                        country: 'Sulawesi Tenggara',
-                                        rating: 45)),
-                                    BoxH30,
-                                    rekomend(Space(
-                                        id: 3,
-                                        name: 'Momaka',
-                                        imageUrl: 'assets/images/space3.png',
-                                        price: 46,
-                                        city: 'Jakarta Selatan',
-                                        country: 'Jawa Barat',
-                                        rating: 45)),
-                                    BoxH30,
-                                    rekomend(Space(
-                                        id: 3,
-                                        name: 'Merdeka',
-                                        imageUrl: 'assets/images/space1.png',
-                                        price: 33,
-                                        city: 'Tegal',
-                                        country: 'Jawa tengah',
-                                        rating: 45)),
-                                  ],
-                                );
-                              } else {
-                                return const Center(
-                                  child: CircularProgressIndicator(),
-                                );
-                              }
-                            }),
-                          ),
+                          // FutureBuilder(
+                          //   future: spaceProvider.getApiRecomendedSpace(),
+                          //   builder: ((context, snapshot) {
+                          //     if (snapshot.hasData) {
+                          //       List<Space> data = snapshot.data;
+                          //       int index = 0;
+                          //       return Column(
+                          //         crossAxisAlignment: CrossAxisAlignment.start,
+                          //         children: [
+                          //           // data.map((e) => rekomend(Space(e))).toList(),
+                          //           rekomend(Space(
+                          //               id: 1,
+                          //               name: 'Lippo',
+                          //               imageUrl: 'assets/images/space1.png',
+                          //               price: 56,
+                          //               city: 'Surabaya',
+                          //               country: 'Jawa Timuur',
+                          //               rating: 45)),
+                          //           BoxH30,
+                          //           rekomend(Space(
+                          //               id: 2,
+                          //               name: 'Morini',
+                          //               imageUrl: 'assets/images/space2.png',
+                          //               price: 58,
+                          //               city: 'Kendari',
+                          //               country: 'Sulawesi Tenggara',
+                          //               rating: 45)),
+                          //           BoxH30,
+                          //           rekomend(Space(
+                          //               id: 3,
+                          //               name: 'Momaka',
+                          //               imageUrl: 'assets/images/space3.png',
+                          //               price: 46,
+                          //               city: 'Jakarta Selatan',
+                          //               country: 'Jawa Barat',
+                          //               rating: 45)),
+                          //           BoxH30,
+                          //           rekomend(Space(
+                          //               id: 3,
+                          //               name: 'Merdeka',
+                          //               imageUrl: 'assets/images/space1.png',
+                          //               price: 33,
+                          //               city: 'Tegal',
+                          //               country: 'Jawa tengah',
+                          //               rating: 45)),
+                          //         ],
+                          //       );
+                          //     } else {
+                          //       return const Center(
+                          //         child: CircularProgressIndicator(),
+                          //       );
+                          //     }
+                          //   }),
+                          // ),
                         ],
                       ),
                     ),
