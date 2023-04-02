@@ -47,16 +47,16 @@ class Home extends StatelessWidget {
                               1, 'Kendari', 'assets/images/city1.png', true)),
                           BoxW12,
                           cityCard(City(
-                              2, 'Surabayaa', 'assets/images/city2.png', false)),
+                              2, 'Surabaya', 'assets/images/city2.png', false)),
                           BoxW12,
                           cityCard(City(
-                              3, 'Makassar', 'assets/images/city3.png', false)),
+                              3, 'Makasar', 'assets/images/city3.png', false)),
                           BoxW12,
                           cityCard(City(
-                              4, 'Palembaanng', 'assets/images/city4.png', true)),
+                              4, 'Palembang', 'assets/images/city4.png', true)),
                           BoxW12,
                           cityCard(City(
-                              5, 'Tegaal', 'assets/images/city5.png', true)),
+                              5, 'Tegal', 'assets/images/city5.png', true)),
                           BoxW12,
                           cityCard(City(6, 'Semaraaang',
                               'assets/images/city6.png', false)),
@@ -136,10 +136,10 @@ class Home extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        guidance_card(guidance(1, 'City Guidelines',
+                        GuidanceCard(Guidance(1, 'City Guidelines',
                             'assets/images/tips1.png', '20 Apr')),
                         BoxH30,
-                        guidance_card(guidance(2, 'Jakarta Fairship',
+                        GuidanceCard(Guidance(2, 'Jakarta Fairship',
                             'assets/images/tips2.png', '11 Dec')),
                         BoxH30,
                       ],

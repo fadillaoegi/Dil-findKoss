@@ -1,8 +1,8 @@
-class guidance {
+class Guidance {
   int id;
   String name;
   String imageUrl;
   String updateAt;
 
-  guidance(this.id, this.name, this.imageUrl, this.updateAt);
+  Guidance(this.id, this.name, this.imageUrl, this.updateAt);
 }
