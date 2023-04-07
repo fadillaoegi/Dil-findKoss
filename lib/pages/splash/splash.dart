@@ -4,7 +4,7 @@ import '../home/home.dart';
 import '../../style/style.dart';
 
 class Splash extends StatefulWidget {
-  Splash({Key? key}) : super(key: key);
+  const Splash({Key? key}) : super(key: key);
 
   @override
   State<Splash> createState() => _SplashState();
@@ -42,13 +42,15 @@ class _SplashState extends State<Splash> {
                   BoxH10,
                   text2,
                   BoxH40,
-                  Container(
+                  SizedBox(
                     width: 210,
                     height: 50,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (context) => const Home()));
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Home()));
                       },
                       child: text3,
                     ),

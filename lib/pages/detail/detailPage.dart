@@ -31,7 +31,7 @@ class Detail extends StatelessWidget {
           ),
           ListView(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 327.0,
               ),
               Container(
@@ -40,7 +40,7 @@ class Detail extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: colorWhite,
                     borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(20))),
+                        const BorderRadius.vertical(top: Radius.circular(20))),
                 child: Padding(
                   padding:
                       const EdgeInsets.only(top: 30.0, left: 24.0, right: 24.0),
@@ -123,7 +123,7 @@ class Detail extends StatelessWidget {
                       Text("Photos",
                           style: TsBlackMedium.copyWith(fontSize: 16.0)),
                       BoxH12,
-                      Container(
+                      SizedBox(
                         height: 88,
                         child: ListView(
                           children: [
@@ -185,7 +185,7 @@ class Detail extends StatelessWidget {
                         ],
                       ),
                       BoxH40,
-                      Container(
+                      SizedBox(
                           height: 50,
                           width: MediaQuery.of(context).size.width,
                           child: ElevatedButton(
