@@ -9,7 +9,7 @@ import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
 import '../../widgets/rekomend_card.dart';
 import '../../widgets/guidance_card.dart';
-import '../../widgets/bottomNavItem.dart';
+import '../../widgets/bottom_nav.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -31,124 +31,124 @@ class Home extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     text1,
-                    BoxH2,
+                    boxH2,
                     text2,
-                    BoxH30,
+                    boxH30,
                     // NOTE: Popular City
                     text3,
-                    BoxH16,
+                    boxH16,
                     Container(
                       margin: const EdgeInsets.all(0),
                       height: 150,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
-                          cityCard(City(
+                          CityCard(City(
                               1, 'Kendari', 'assets/images/city1.png', true)),
-                          BoxW12,
-                          cityCard(City(
+                          boxW12,
+                          CityCard(City(
                               2, 'Surabaya', 'assets/images/city2.png', false)),
-                          BoxW12,
-                          cityCard(City(
+                          boxW12,
+                          CityCard(City(
                               3, 'Makasar', 'assets/images/city3.png', false)),
-                          BoxW12,
-                          cityCard(City(
+                          boxW12,
+                          CityCard(City(
                               4, 'Palembang', 'assets/images/city4.png', true)),
-                          BoxW12,
-                          cityCard(City(
+                          boxW12,
+                          CityCard(City(
                               5, 'Tegal', 'assets/images/city5.png', true)),
-                          BoxW12,
-                          cityCard(City(6, 'Semaraaang',
+                          boxW12,
+                          CityCard(City(6, 'Semaraaang',
                               'assets/images/city6.png', false)),
                         ],
                       ),
                     ),
-                    BoxH30,
+                    boxH30,
                     // NOTE Recommended Space
                     text5,
-                    BoxH16,
+                    boxH16,
                     SizedBox(
                       height: 300,
                       child: ListView(
                         scrollDirection: Axis.vertical,
-                        children: const [
-                          // FutureBuilder(
-                          //   future: spaceProvider.getApiRecomendedSpace(),
-                          //   builder: ((context, snapshot) {
-                          //     if (snapshot.hasData) {
-                          //       // List<Space> data = snapshot.data;
-                          //       int index = 0;
-                          //       return Column(
-                          //         crossAxisAlignment: CrossAxisAlignment.start,
-                          //         children: [
-                          //           // data.map((e) => rekomend(Space(e))).toList(),
-                          //           rekomend(Space(
-                          //               id: 1,
-                          //               name: 'Lippoo',
-                          //               imageUrl: 'assets/images/space1.png',
-                          //               price: 56,
-                          //               city: 'Surabaya',
-                          //               country: 'Jawa Timuur',
-                          //               rating: 45)),
-                          //           BoxH30,
-                          //           rekomend(Space(
-                          //               id: 2,
-                          //               name: 'Morini',
-                          //               imageUrl: 'assets/images/space2.png',
-                          //               price: 58,
-                          //               city: 'Kendari',
-                          //               country: 'Sulawesi Tenggara',
-                          //               rating: 45)),
-                          //           BoxH30,
-                          //           rekomend(Space(
-                          //               id: 3,
-                          //               name: 'Momaka',
-                          //               imageUrl: 'assets/images/space3.png',
-                          //               price: 46,
-                          //               city: 'Jakarta Selatan',
-                          //               country: 'Jawa Barat',
-                          //               rating: 45)),
-                          //           BoxH30,
-                          //           rekomend(Space(
-                          //               id: 3,
-                          //               name: 'Merdeka',
-                          //               imageUrl: 'assets/images/space1.png',
-                          //               price: 33,
-                          //               city: 'Tegal',
-                          //               country: 'Jawa tengah',
-                          //               rating: 45)),
-                          //         ],
-                          //       );
-                          //     } else {
-                          //       return const Center(
-                          //         child: CircularProgressIndicator(),
-                          //       );
-                          //     }
-                          //   }),
-                          // ),
+                        children: [
+                          FutureBuilder(
+                            future: spaceProvider.getApiRecomendedSpace(),
+                            builder: ((context, snapshot) {
+                              if (snapshot.hasData) {
+                                // List<Space> data = snapshot.data;
+                                // int index = 0;
+                                // data.map((e) => Rekomend(Space())).toList();
+                                return Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Rekomend(Space(
+                                        id: 1,
+                                        name: 'Lippoo',
+                                        imageUrl: 'assets/images/space1.png',
+                                        price: 56,
+                                        city: 'Surabaya',
+                                        country: 'Jawa Timuur',
+                                        rating: 45)),
+                                    boxH30,
+                                    Rekomend(Space(
+                                        id: 2,
+                                        name: 'Morini',
+                                        imageUrl: 'assets/images/space2.png',
+                                        price: 58,
+                                        city: 'Kendari',
+                                        country: 'Sulawesi Tenggara',
+                                        rating: 45)),
+                                    boxH30,
+                                    Rekomend(Space(
+                                        id: 3,
+                                        name: 'Momaka',
+                                        imageUrl: 'assets/images/space3.png',
+                                        price: 46,
+                                        city: 'Jakarta Selatan',
+                                        country: 'Jawa Barat',
+                                        rating: 45)),
+                                    boxH30,
+                                    Rekomend(Space(
+                                        id: 3,
+                                        name: 'Merdeka',
+                                        imageUrl: 'assets/images/space1.png',
+                                        price: 33,
+                                        city: 'Tegal',
+                                        country: 'Jawa tengah',
+                                        rating: 45)),
+                                  ],
+                                );
+                              } else {
+                                return const Center(
+                                  child: CircularProgressIndicator(),
+                                );
+                              }
+                            }),
+                          ),
                         ],
                       ),
                     ),
-                    BoxH30,
+                    boxH30,
                     // NOTE: Tips & Guidance
                     text4,
-                    BoxH20,
+                    boxH20,
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         GuidanceCard(Guidance(1, 'City Guidelines',
                             'assets/images/tips1.png', '20 Apr')),
-                        BoxH30,
+                        boxH30,
                         GuidanceCard(Guidance(2, 'Jakarta Fairship',
                             'assets/images/tips2.png', '11 Dec')),
-                        BoxH30,
+                        boxH30,
                       ],
                     )
                   ],
                 ),
               ),
-              BoxH50,
-              BoxH20
+              boxH50,
+              boxH20
             ],
           ),
         ),
@@ -158,7 +158,7 @@ class Home extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 18),
         decoration: BoxDecoration(
             color: colorWhite, borderRadius: BorderRadius.circular(30)),
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             BottomNavItem(true, 'assets/images/icon_home.png'),

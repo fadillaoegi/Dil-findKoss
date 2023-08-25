@@ -4,15 +4,15 @@ import '../style/style.dart';
 
 // TextStyle By Project
 
-TextStyle Ts3 = GoogleFonts.poppins(fontWeight: FontWeight.w300, color: colorGrey);
-TextStyle Ts4 = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: colorPurple);
+TextStyle ts3 = GoogleFonts.poppins(fontWeight: FontWeight.w300, color: colorGrey);
+TextStyle ts4 = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: colorPurple);
 
 
-TextStyle TsBlackBold =
+TextStyle tsBlackBold =
     GoogleFonts.poppins(fontWeight: FontWeight.w500, color: colorBlack);
-TextStyle TsBlackMedium =
+TextStyle tsBlackMedium =
     GoogleFonts.poppins(fontWeight: FontWeight.w400, color: colorBlack);
-TextStyle TsWhiteBold =
+TextStyle tsWhiteBold =
     GoogleFonts.poppins(fontWeight: FontWeight.w500, color: colorWhite);
-TextStyle TsWhiteMedium =
+TextStyle tsWhiteMedium =
     GoogleFonts.poppins(fontWeight: FontWeight.w400, color: colorWhite);

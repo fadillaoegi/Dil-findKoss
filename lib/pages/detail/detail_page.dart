@@ -52,7 +52,7 @@ class Detail extends StatelessWidget {
                         children: [
                           Text(
                             "Lippo",
-                            style: TsBlackBold.copyWith(fontSize: 22.0),
+                            style: tsBlackBold.copyWith(fontSize: 22.0),
                           ),
                           Row(
                             children: [
@@ -60,52 +60,52 @@ class Detail extends StatelessWidget {
                                 "assets/images/icon_star.png",
                                 width: 20.0,
                               ),
-                              BoxW4,
+                              boxW4,
                               Image.asset(
                                 "assets/images/icon_star.png",
                                 width: 20.0,
                               ),
-                              BoxW4,
+                              boxW4,
                               Image.asset(
                                 "assets/images/icon_star.png",
                                 width: 20.0,
                               ),
-                              BoxW4,
+                              boxW4,
                               Image.asset(
                                 "assets/images/icon_star.png",
                                 width: 20.0,
                               ),
-                              BoxW4,
+                              boxW4,
                               Image.asset(
                                 "assets/images/icon_star_grey.png",
                                 width: 20.0,
                               ),
-                              BoxW4,
+                              boxW4,
                             ],
                           )
                         ],
                       ),
 
-                      BoxH4,
+                      boxH4,
 
                       // NOTE: Price
                       Text.rich(
                         TextSpan(
                             // text: "\$ ${spaceModel.price} ",
                             text: "\$ 52",
-                            style: Ts4.copyWith(fontSize: 16),
+                            style: ts4.copyWith(fontSize: 16),
                             children: [
                               TextSpan(
                                   text: " /mount",
-                                  style: Ts3.copyWith(fontSize: 16))
+                                  style: ts3.copyWith(fontSize: 16))
                             ]),
                       ),
-                      BoxH30,
+                      boxH30,
                       Text(
                         "Main Facilities",
-                        style: TsBlackMedium.copyWith(fontSize: 16.0),
+                        style: tsBlackMedium.copyWith(fontSize: 16.0),
                       ),
-                      BoxH12,
+                      boxH12,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -119,10 +119,10 @@ class Detail extends StatelessWidget {
                               3))
                         ],
                       ),
-                      BoxH30,
+                      boxH30,
                       Text("Photos",
-                          style: TsBlackMedium.copyWith(fontSize: 16.0)),
-                      BoxH12,
+                          style: tsBlackMedium.copyWith(fontSize: 16.0)),
+                      boxH12,
                       SizedBox(
                         height: 88,
                         child: ListView(
@@ -132,19 +132,19 @@ class Detail extends StatelessWidget {
                               width: 110.0,
                               height: 88,
                             ),
-                            BoxW4,
+                            boxW4,
                             Image.asset(
                               'assets/images/photo2.png',
                               width: 110.0,
                               height: 88,
                             ),
-                            BoxW4,
+                            boxW4,
                             Image.asset(
                               'assets/images/photo3.png',
                               width: 110.0,
                               height: 88,
                             ),
-                            BoxW4,
+                            boxW4,
                             Image.asset(
                               'assets/images/photo1.png',
                               width: 110.0,
@@ -155,20 +155,20 @@ class Detail extends StatelessWidget {
                         ),
                       ),
 
-                      BoxH30,
+                      boxH30,
 
                       // NOTE : LOCATION
                       Text(
                         "Location",
-                        style: TsBlackMedium.copyWith(fontSize: 16.0),
+                        style: tsBlackMedium.copyWith(fontSize: 16.0),
                       ),
-                      BoxH8,
+                      boxH8,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             "Jln. Kappan Sukses No. 20\nPalembang",
-                            style: Ts3.copyWith(fontSize: 14.0),
+                            style: ts3.copyWith(fontSize: 14.0),
                           ),
                           InkWell(
                             onTap: (() {
@@ -184,7 +184,7 @@ class Detail extends StatelessWidget {
                           )
                         ],
                       ),
-                      BoxH40,
+                      boxH40,
                       SizedBox(
                           height: 50,
                           width: MediaQuery.of(context).size.width,
@@ -194,7 +194,7 @@ class Detail extends StatelessWidget {
                             },
                             child: Text(
                               "Book Now",
-                              style: TsWhiteBold.copyWith(
+                              style: tsWhiteBold.copyWith(
                                 fontSize: 18.0,
                               ),
                             ),

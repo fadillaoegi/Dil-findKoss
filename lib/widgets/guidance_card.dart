@@ -3,32 +3,33 @@ import 'package:findkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../style/style.dart';
 
+// ignore: must_be_immutable
 class GuidanceCard extends StatelessWidget {
-  Guidance GuidanceModel;
-  GuidanceCard(this.GuidanceModel);
+  Guidance guidanceModel;
+  GuidanceCard(this.guidanceModel, {Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Image.asset(
-          GuidanceModel.imageUrl,
+          guidanceModel.imageUrl,
           // "assets/images/tips1.png",
           width: 80,
         ),
-        BoxW16,
+        boxW16,
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              GuidanceModel.name,
+              guidanceModel.name,
               // "City Guidelines",
-              style: TsBlackMedium.copyWith(fontSize: 18),
+              style: tsBlackMedium.copyWith(fontSize: 18),
             ),
-            BoxH4,
+            boxH4,
             Text(
-              "Updated ${GuidanceModel.updateAt}",
-              style: Ts3.copyWith(fontSize: 14),
+              "Updated ${guidanceModel.updateAt}",
+              style: ts3.copyWith(fontSize: 14),
             )
           ],
         ),

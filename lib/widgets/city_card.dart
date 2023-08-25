@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import '../style/style.dart';
 import '../style/textstyle.dart';
 
-class cityCard extends StatelessWidget {
+// ignore: must_be_immutable
+class CityCard extends StatelessWidget {
   // const cityCard({Key? key}) : super(key: key);
 
   City city;
-  cityCard(this.city);
+  CityCard(this.city, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,18 +43,18 @@ class cityCard extends StatelessWidget {
                               )),
                               decoration: BoxDecoration(
                                   color: colorPurple,
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                     bottomLeft: Radius.circular(30),
                                   ))),
                         )
                       : Container()
                 ],
               ),
-              BoxH24,
+              boxH24,
               Text(
                 city.name,
                 // city.name,
-                style: TsBlackBold.copyWith(fontSize: 16.0),
+                style: tsBlackBold.copyWith(fontSize: 16.0),
               )
             ],
           ),

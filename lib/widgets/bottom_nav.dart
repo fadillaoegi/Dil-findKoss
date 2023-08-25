@@ -6,20 +6,20 @@ class BottomNavItem extends StatelessWidget {
   final String imageUrl;
   final bool aktif;
 
-  BottomNavItem(this.aktif, this.imageUrl);
+  const BottomNavItem(this.aktif, this.imageUrl, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       // mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Spacer(),
+        const Spacer(),
         Image.asset(
           // "assets/images/icon_home.png",
           imageUrl,
           width: 26,
         ),
-        Spacer(),
+        const Spacer(),
         aktif
             ? Container(
                 width: 30,
@@ -27,7 +27,7 @@ class BottomNavItem extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: colorPurple,
                     borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(1000))),
+                        const BorderRadius.vertical(top: Radius.circular(1000))),
               )
             : Container()
         // Image.asset(

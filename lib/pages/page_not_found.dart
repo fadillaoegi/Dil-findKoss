@@ -27,19 +27,19 @@ class _NotFoundState extends State<NotFound> {
                     height: 85.0,
                     width: 300.0,
                   ),
-                  BoxH62,
+                  boxH62,
                   Text(
                     "Where are you going?",
-                    style: TsBlackBold.copyWith(fontSize: 24.0),
+                    style: tsBlackBold.copyWith(fontSize: 24.0),
                   ),
-                  BoxH8,
+                  boxH8,
                   Text(
                     "Seems like the page that you were",
-                    style: Ts3.copyWith(fontSize: 16.0),
+                    style: ts3.copyWith(fontSize: 16.0),
                   ),
                   Text(
                     "requested is already gone",
-                    style: Ts3.copyWith(fontSize: 16.0),
+                    style: ts3.copyWith(fontSize: 16.0),
                   ),
                   const SizedBox(
                     height: 94.0,
@@ -47,7 +47,7 @@ class _NotFoundState extends State<NotFound> {
                   ElevatedButton(
                     child: Text(
                       "Back To Home",
-                      style: TsWhiteBold,
+                      style: tsWhiteBold,
                     ),
                     onPressed: () {},
                   )

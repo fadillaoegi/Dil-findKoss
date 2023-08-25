@@ -1,27 +1,27 @@
 import 'package:findkoss/models/space.dart';
-import 'package:findkoss/pages/detail/detailPage.dart';
+import 'package:findkoss/pages/detail/detail_page.dart';
 import 'package:findkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../style/style.dart';
-import '../models/space.dart';
+// import '../models/space.dart';
 
-class rekomend extends StatelessWidget {
+class Rekomend extends StatelessWidget {
   // const rekomend({Key? key}) : super(key: key);
   final Space spaceModel;
-  const rekomend(this.spaceModel);
+  const Rekomend(this.spaceModel, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Detail()));
+            context, MaterialPageRoute(builder: (context) => const Detail()));
       },
       child: Row(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(18),
-            child: Container(
+            child: SizedBox(
               height: 110,
               width: 130,
               child: Stack(children: [
@@ -44,7 +44,7 @@ class rekomend extends StatelessWidget {
                             ),
                             Text(
                               spaceModel.rating.toString(),
-                              style: TsWhiteMedium.copyWith(fontSize: 13),
+                              style: tsWhiteMedium.copyWith(fontSize: 13),
                             )
                           ])),
                       decoration: BoxDecoration(
@@ -63,22 +63,22 @@ class rekomend extends StatelessWidget {
               children: [
                 Text(
                   spaceModel.name!,
-                  style: TsBlackMedium.copyWith(fontSize: 18),
+                  style: tsBlackMedium.copyWith(fontSize: 18),
                 ),
-                BoxH2,
+                boxH2,
                 Text.rich(
                   TextSpan(
                       text: "\$ ${spaceModel.price} ",
-                      style: Ts4.copyWith(fontSize: 16),
+                      style: ts4.copyWith(fontSize: 16),
                       children: [
                         TextSpan(
-                            text: " /mount", style: Ts3.copyWith(fontSize: 16))
+                            text: " /mount", style: ts3.copyWith(fontSize: 16))
                       ]),
                 ),
-                BoxH16,
+                boxH16,
                 Text(
                   "${spaceModel.city}, ${spaceModel.country}",
-                  style: Ts3.copyWith(fontSize: 14),
+                  style: ts3.copyWith(fontSize: 14),
                 ),
               ],
             ),

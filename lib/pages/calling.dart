@@ -3,7 +3,7 @@ import 'package:findkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 
 class Calling extends StatefulWidget {
-  Calling({Key? key}) : super(key: key);
+  const Calling({Key? key}) : super(key: key);
 
   @override
   State<Calling> createState() => _CallingState();
@@ -33,16 +33,16 @@ class _CallingState extends State<Calling> {
                     ),
                     Text(
                       "Shofa Nabila Alifa",
-                      style: TsBlackBold.copyWith(fontSize: 20.0),
+                      style: tsBlackBold.copyWith(fontSize: 20.0),
                     ),
                     const SizedBox(
                       height: 6.0,
                     ),
                     Text(
                       "12 : 30 minutess",
-                      style: TsBlackMedium.copyWith(fontSize: 16.0),
+                      style: tsBlackMedium.copyWith(fontSize: 16.0),
                     ),
-                    BoxH30,
+                    boxH30,
                     TextButton(
                         onPressed: () {},
                         child: Image.asset(

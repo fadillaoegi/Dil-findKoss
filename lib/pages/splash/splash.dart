@@ -23,7 +23,7 @@ class _SplashState extends State<Splash> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            BoxH50,
+            boxH50,
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
               child: Column(
@@ -37,11 +37,11 @@ class _SplashState extends State<Splash> {
                       image: AssetImage("assets/images/logo.png"),
                     )),
                   ),
-                  BoxH30,
+                  boxH30,
                   text1,
-                  BoxH10,
+                  boxH10,
                   text2,
-                  BoxH40,
+                  boxH40,
                   SizedBox(
                     width: 210,
                     height: 50,

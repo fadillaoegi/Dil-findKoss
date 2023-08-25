@@ -7,222 +7,222 @@ Color colorGrey = const Color(0xff7A7E86);
 Color colorWhite = const Color(0xfff6f7f8);
 
 // SizedBox Height Template by @fdlml_
-const BoxH2 = SizedBox(
+const boxH2 = SizedBox(
   height: 2,
 );
-const BoxH4 = SizedBox(
+const boxH4 = SizedBox(
   height: 4,
 );
-const BoxH8 = SizedBox(
+const boxH8 = SizedBox(
   height: 8,
 );
-const BoxH10 = SizedBox(
+const boxH10 = SizedBox(
   height: 10,
 );
-const BoxH12 = SizedBox(
+const boxH12 = SizedBox(
   height: 12,
 );
-const BoxH14 = SizedBox(
+const boxH14 = SizedBox(
   height: 14,
 );
-const BoxH16 = SizedBox(
+const boxH16 = SizedBox(
   height: 16,
 );
-const BoxH18 = SizedBox(
+const boxH18 = SizedBox(
   height: 18,
 );
-const BoxH20 = SizedBox(
+const boxH20 = SizedBox(
   height: 20,
 );
-const BoxH21 = SizedBox(
+const boxH21 = SizedBox(
   height: 21,
 );
-const BoxH22 = SizedBox(
+const boxH22 = SizedBox(
   height: 22,
 );
-const BoxH24 = SizedBox(
+const boxH24 = SizedBox(
   height: 24,
 );
-const BoxH26 = SizedBox(
+const boxH26 = SizedBox(
   height: 26,
 );
-const BoxH28 = SizedBox(
+const boxH28 = SizedBox(
   height: 28,
 );
-const BoxH30 = SizedBox(
+const boxH30 = SizedBox(
   height: 30,
 );
-const BoxH32 = SizedBox(
+const boxH32 = SizedBox(
   height: 32,
 );
-const BoxH34 = SizedBox(
+const boxH34 = SizedBox(
   height: 34,
 );
-const BoxH35 = SizedBox(
+const boxH35 = SizedBox(
   height: 35,
 );
-const BoxH36 = SizedBox(
+const boxH36 = SizedBox(
   height: 36,
 );
-const BoxH38 = SizedBox(
+const boxH38 = SizedBox(
   height: 38,
 );
-const BoxH40 = SizedBox(
+const boxH40 = SizedBox(
   height: 40,
 );
-const BoxH41 = SizedBox(
+const boxH41 = SizedBox(
   height: 41,
 );
-const BoxH42 = SizedBox(
+const boxH42 = SizedBox(
   height: 42,
 );
-const BoxH44 = SizedBox(
+const boxH44 = SizedBox(
   height: 44,
 );
-const BoxH45 = SizedBox(
+const boxH45 = SizedBox(
   height: 45,
 );
-const BoxH46 = SizedBox(
+const boxH46 = SizedBox(
   height: 46,
 );
-const BoxH48 = SizedBox(
+const boxH48 = SizedBox(
   height: 48,
 );
-const BoxH50 = SizedBox(
+const boxH50 = SizedBox(
   height: 50,
 );
-const BoxH51 = SizedBox(
+const boxH51 = SizedBox(
   height: 51,
 );
-const BoxH52 = SizedBox(
+const boxH52 = SizedBox(
   height: 52,
 );
-const BoxH54 = SizedBox(
+const boxH54 = SizedBox(
   height: 54,
 );
-const BoxH56 = SizedBox(
+const boxH56 = SizedBox(
   height: 56,
 );
-const BoxH58 = SizedBox(
+const boxH58 = SizedBox(
   height: 58,
 );
-const BoxH60 = SizedBox(
+const boxH60 = SizedBox(
   height: 60,
 );
-const BoxH62 = SizedBox(
+const boxH62 = SizedBox(
   height: 62,
 );
 
 // SizedBox Widht Template by @fdlml_
 
-const BoxW2 = SizedBox(
+const boxW2 = SizedBox(
   width: 2,
 );
-const BoxW4 = SizedBox(
+const boxW4 = SizedBox(
   width: 4,
 );
-const BoxW8 = SizedBox(
+const boxW8 = SizedBox(
   width: 8,
 );
-const BoxW10 = SizedBox(
+const boxW10 = SizedBox(
   width: 10,
 );
-const BoxW12 = SizedBox(
+const boxW12 = SizedBox(
   width: 12,
 );
-const BoxW14 = SizedBox(
+const boxW14 = SizedBox(
   width: 14,
 );
-const BoxW16 = SizedBox(
+const boxW16 = SizedBox(
   width: 16,
 );
-const BoxW18 = SizedBox(
+const boxW18 = SizedBox(
   width: 18,
 );
-const BoxW20 = SizedBox(
+const boxW20 = SizedBox(
   width: 20,
 );
-const BoxW21 = SizedBox(
+const boxW21 = SizedBox(
   width: 21,
 );
-const BoxW22 = SizedBox(
+const boxW22 = SizedBox(
   width: 22,
 );
-const BoxW24 = SizedBox(
+const boxW24 = SizedBox(
   width: 24,
 );
-const BoxW26 = SizedBox(
+const boxW26 = SizedBox(
   width: 26,
 );
-const BoxW28 = SizedBox(
+const boxW28 = SizedBox(
   width: 28,
 );
-const BoxW30 = SizedBox(
+const boxW30 = SizedBox(
   width: 30,
 );
-const BoxW32 = SizedBox(
+const boxW32 = SizedBox(
   width: 32,
 );
-const BoxW34 = SizedBox(
+const boxW34 = SizedBox(
   width: 34,
 );
-const BoxW35 = SizedBox(
+const boxW35 = SizedBox(
   width: 35,
 );
-const BoxW36 = SizedBox(
+const boxW36 = SizedBox(
   width: 36,
 );
-const BoxW38 = SizedBox(
+const boxW38 = SizedBox(
   width: 38,
 );
-const BoxW40 = SizedBox(
+const boxW40 = SizedBox(
   width: 40,
 );
-const BoxW41 = SizedBox(
+const boxW41 = SizedBox(
   width: 41,
 );
-const BoxW42 = SizedBox(
+const boxW42 = SizedBox(
   width: 42,
 );
-const BoxW44 = SizedBox(
+const boxW44 = SizedBox(
   width: 44,
 );
-const BoxW45 = SizedBox(
+const boxW45 = SizedBox(
   width: 45,
 );
-const BoxW46 = SizedBox(
+const boxW46 = SizedBox(
   width: 46,
 );
-const BoxW48 = SizedBox(
+const boxW48 = SizedBox(
   width: 48,
 );
-const BoxW50 = SizedBox(
+const boxW50 = SizedBox(
   width: 50,
 );
-const BoxW51 = SizedBox(
+const boxW51 = SizedBox(
   width: 51,
 );
-const BoxW52 = SizedBox(
+const boxW52 = SizedBox(
   width: 52,
 );
-const BoxW54 = SizedBox(
+const boxW54 = SizedBox(
   width: 54,
 );
-const BoxW56 = SizedBox(
+const boxW56 = SizedBox(
   width: 56,
 );
-const BoxW58 = SizedBox(
+const boxW58 = SizedBox(
   width: 58,
 );
-const BoxW60 = SizedBox(
+const boxW60 = SizedBox(
   width: 60,
 );
-const BoxW62 = SizedBox(
+const boxW62 = SizedBox(
   width: 62,
 );
-const BoxW64 = SizedBox(
+const boxW64 = SizedBox(
   width: 64,
 );
-const BoxW68 = SizedBox(
+const boxW68 = SizedBox(
   width: 68,
 );
