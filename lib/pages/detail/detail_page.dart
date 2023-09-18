@@ -126,6 +126,7 @@ class Detail extends StatelessWidget {
                       SizedBox(
                         height: 88,
                         child: ListView(
+                          scrollDirection: Axis.horizontal,
                           children: [
                             Image.asset(
                               'assets/images/photo1.png',
@@ -151,7 +152,6 @@ class Detail extends StatelessWidget {
                               height: 88,
                             ),
                           ],
-                          scrollDirection: Axis.horizontal,
                         ),
                       ),
 

@@ -33,19 +33,21 @@ class CityCard extends StatelessWidget {
                       ? Align(
                           alignment: Alignment.topRight,
                           child: Container(
-                              height: 30,
-                              width: 50,
-                              child: Center(
-                                  child: Image.asset(
-                                "assets/images/icon_star.png",
-                                width: 22,
-                                height: 22,
-                              )),
-                              decoration: BoxDecoration(
-                                  color: colorPurple,
-                                  borderRadius: const BorderRadius.only(
-                                    bottomLeft: Radius.circular(30),
-                                  ))),
+                            height: 30,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              color: colorPurple,
+                              borderRadius: const BorderRadius.only(
+                                bottomLeft: Radius.circular(30),
+                              ),
+                            ),
+                            child: Center(
+                                child: Image.asset(
+                              "assets/images/icon_star.png",
+                              width: 22,
+                              height: 22,
+                            )),
+                          ),
                         )
                       : Container()
                 ],
