@@ -31,9 +31,14 @@ class Rekomend extends StatelessWidget {
                 Align(
                   alignment: Alignment.topRight,
                   child: Container(
-                      height: 30,
-                      width: 70,
-                      child: Center(
+                    height: 30,
+                    width: 70,
+                    decoration: BoxDecoration(
+                      color: colorPurple,
+                      borderRadius: const BorderRadius.only(
+                        bottomLeft: Radius.circular(30),
+                      ),
+                    ),child: Center(
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -47,11 +52,7 @@ class Rekomend extends StatelessWidget {
                               style: tsWhiteMedium.copyWith(fontSize: 13),
                             )
                           ])),
-                      decoration: BoxDecoration(
-                          color: colorPurple,
-                          borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(30),
-                          ))),
+                  ),
                 )
               ]),
             ),
