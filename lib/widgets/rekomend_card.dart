@@ -38,20 +38,22 @@ class Rekomend extends StatelessWidget {
                       borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(30),
                       ),
-                    ),child: Center(
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                            Image.asset(
-                              "assets/images/icon_star.png",
-                              width: 22,
-                              height: 22,
-                            ),
-                            Text(
-                              spaceModel.rating.toString(),
-                              style: tsWhiteMedium.copyWith(fontSize: 13),
-                            )
-                          ])),
+                    ),
+                    child: Center(
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                          Image.network(
+                            // "assets/images/icon_star.png",
+                            spaceModel.imageUrl!,
+                            width: 22,
+                            height: 22,
+                          ),
+                          Text(
+                            spaceModel.rating.toString(),
+                            style: tsWhiteMedium.copyWith(fontSize: 13),
+                          )
+                        ])),
                   ),
                 )
               ]),
