@@ -85,66 +85,19 @@ class Home extends StatelessWidget {
                     boxH16,
                     SizedBox(
                       height: 300,
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
-                        children: [
-                          FutureBuilder(
-                            future: spaceProvider.getApiRecomendedSpace(),
-                            builder: ((context, snapshot) {
-                              if (snapshot.hasData) {
-                                // List<Space> data = snapshot.data;
-                                // int index = 0;
-                                return const Center(
-                                    child: CircularProgressIndicator());
-                                // data.map((e) => Rekomend(Space())).toList();
-                                // return Column(
-                                //   crossAxisAlignment: CrossAxisAlignment.start,
-                                //   children: [
-                                //     Rekomend(Space(
-                                //         id: 1,
-                                //         name: 'Lippoo',
-                                //         imageUrl: 'assets/images/space1.png',
-                                //         price: 56,
-                                //         city: 'Surabaya',
-                                //         country: 'Jawa Timuur',
-                                //         rating: 45)),
-                                //     boxH30,
-                                //     Rekomend(Space(
-                                //         id: 2,
-                                //         name: 'Morini',
-                                //         imageUrl: 'assets/images/space2.png',
-                                //         price: 58,
-                                //         city: 'Kendari',
-                                //         country: 'Sulawesi Tenggara',
-                                //         rating: 45)),
-                                //     boxH30,
-                                //     Rekomend(Space(
-                                //         id: 3,
-                                //         name: 'Momaka',
-                                //         imageUrl: 'assets/images/space3.png',
-                                //         price: 46,
-                                //         city: 'Jakarta Selatan',
-                                //         country: 'Jawa Barat',
-                                //         rating: 45)),
-                                //     boxH30,
-                                //     Rekomend(Space(
-                                //         id: 3,
-                                //         name: 'Merdeka',
-                                //         imageUrl: 'assets/images/space1.png',
-                                //         price: 33,
-                                //         city: 'Tegal',
-                                //         country: 'Jawa tengah',
-                                //         rating: 45)),
-                                //   ],
-                                // );
-                              } else {
-                                return const Center(
-                                  child: CircularProgressIndicator(),
-                                );
-                              }
-                            }),
-                          ),
-                        ],
+                      child: FutureBuilder<Space>(
+                        future: spaceProvider.getApiRecomendedSpace(),
+                        builder: (context, snapshot) {
+                          if (snapshot.connectionState ==
+                              ConnectionState.done) {
+                            return ListView(
+                                scrollDirection: Axis.horizontal, children: []);
+                          } else {
+                            return const Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          }
+                        },
                       ),
                     ),
                     boxH30,

@@ -5,8 +5,6 @@ import '../style/textstyle.dart';
 
 // ignore: must_be_immutable
 class CityCard extends StatelessWidget {
-  // const cityCard({Key? key}) : super(key: key);
-
   City city;
   CityCard(this.city, {Key? key}) : super(key: key);
 
@@ -23,7 +21,7 @@ class CityCard extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Image.asset(
+                  Image.network(
                     city.imageUrl,
                     width: 120,
                     height: 102,
