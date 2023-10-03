@@ -1,4 +1,5 @@
 import 'package:findkoss/models/facility_item.dart';
+import 'package:findkoss/models/space.dart';
 import 'package:findkoss/style/style.dart';
 import 'package:findkoss/style/textstyle.dart';
 import 'package:findkoss/widgets/facility_item.dart';
@@ -7,15 +8,16 @@ import 'package:url_launcher/url_launcher_string.dart';
 // import 'package:';
 
 class Detail extends StatelessWidget {
-  const Detail({Key? key}) : super(key: key);
+  final Space? space;
+  const Detail({Key? key, this.space}) : super(key: key);
 
-  lauchUrl(String url) async {
-    if (await canLaunchUrlString(url)) {
-      lauchUrl(url);
-    } else {
-      throw (url);
-    }
-  }
+  // lauchUrl(String url) async {
+  //   if (await canLaunchUrlString(url)) {
+  //     lauchUrl(url);
+  //   } else {
+  //     throw (url);
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {

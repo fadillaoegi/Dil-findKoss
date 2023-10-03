@@ -2,17 +2,19 @@ import 'package:findkoss/models/city.dart';
 import 'package:findkoss/models/guidance.dart';
 import 'package:findkoss/models/space.dart';
 import 'package:findkoss/providers/space_provider.dart';
+import 'package:findkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../style/style.dart';
 import '../../text/texthome.dart';
 import '../../widgets/city_card.dart';
-import '../../widgets/rekomend_card.dart';
 import '../../widgets/guidance_card.dart';
 import '../../widgets/bottom_nav.dart';
 
+// ignore: must_be_immutable
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  Space? spaceModel;
+  Home({Key? key, this.spaceModel}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +32,22 @@ class Home extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    text1,
+                    Text(
+                      "Explore Now",
+                      style: tsBlackBold.copyWith(fontSize: 24.0),
+                    ),
                     boxH2,
-                    text2,
+                    Text(
+                      "Mencari kosan yang FindKosss",
+                      style: ts3.copyWith(fontSize: 16.0),
+                    ),
                     boxH30,
-                    // NOTE: Popular City
-                    text3,
+
+                    // NOTE: POPULAR CITY
+                    Text(
+                      "Popular Cities",
+                      style: tsBlackMedium.copyWith(fontSize: 16),
+                    ),
                     boxH16,
                     Container(
                       margin: const EdgeInsets.all(0),
@@ -64,8 +76,12 @@ class Home extends StatelessWidget {
                       ),
                     ),
                     boxH30,
+
                     // NOTE Recommended Space
-                    text5,
+                    Text(
+                      "Recommended Space",
+                      style: tsBlackMedium.copyWith(fontSize: 16),
+                    ),
                     boxH16,
                     SizedBox(
                       height: 300,
@@ -78,47 +94,49 @@ class Home extends StatelessWidget {
                               if (snapshot.hasData) {
                                 // List<Space> data = snapshot.data;
                                 // int index = 0;
+                                return const Center(
+                                    child: CircularProgressIndicator());
                                 // data.map((e) => Rekomend(Space())).toList();
-                                return Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Rekomend(Space(
-                                        id: 1,
-                                        name: 'Lippoo',
-                                        imageUrl: 'assets/images/space1.png',
-                                        price: 56,
-                                        city: 'Surabaya',
-                                        country: 'Jawa Timuur',
-                                        rating: 45)),
-                                    boxH30,
-                                    Rekomend(Space(
-                                        id: 2,
-                                        name: 'Morini',
-                                        imageUrl: 'assets/images/space2.png',
-                                        price: 58,
-                                        city: 'Kendari',
-                                        country: 'Sulawesi Tenggara',
-                                        rating: 45)),
-                                    boxH30,
-                                    Rekomend(Space(
-                                        id: 3,
-                                        name: 'Momaka',
-                                        imageUrl: 'assets/images/space3.png',
-                                        price: 46,
-                                        city: 'Jakarta Selatan',
-                                        country: 'Jawa Barat',
-                                        rating: 45)),
-                                    boxH30,
-                                    Rekomend(Space(
-                                        id: 3,
-                                        name: 'Merdeka',
-                                        imageUrl: 'assets/images/space1.png',
-                                        price: 33,
-                                        city: 'Tegal',
-                                        country: 'Jawa tengah',
-                                        rating: 45)),
-                                  ],
-                                );
+                                // return Column(
+                                //   crossAxisAlignment: CrossAxisAlignment.start,
+                                //   children: [
+                                //     Rekomend(Space(
+                                //         id: 1,
+                                //         name: 'Lippoo',
+                                //         imageUrl: 'assets/images/space1.png',
+                                //         price: 56,
+                                //         city: 'Surabaya',
+                                //         country: 'Jawa Timuur',
+                                //         rating: 45)),
+                                //     boxH30,
+                                //     Rekomend(Space(
+                                //         id: 2,
+                                //         name: 'Morini',
+                                //         imageUrl: 'assets/images/space2.png',
+                                //         price: 58,
+                                //         city: 'Kendari',
+                                //         country: 'Sulawesi Tenggara',
+                                //         rating: 45)),
+                                //     boxH30,
+                                //     Rekomend(Space(
+                                //         id: 3,
+                                //         name: 'Momaka',
+                                //         imageUrl: 'assets/images/space3.png',
+                                //         price: 46,
+                                //         city: 'Jakarta Selatan',
+                                //         country: 'Jawa Barat',
+                                //         rating: 45)),
+                                //     boxH30,
+                                //     Rekomend(Space(
+                                //         id: 3,
+                                //         name: 'Merdeka',
+                                //         imageUrl: 'assets/images/space1.png',
+                                //         price: 33,
+                                //         city: 'Tegal',
+                                //         country: 'Jawa tengah',
+                                //         rating: 45)),
+                                //   ],
+                                // );
                               } else {
                                 return const Center(
                                   child: CircularProgressIndicator(),
