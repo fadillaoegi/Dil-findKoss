@@ -1,11 +1,10 @@
-import 'package:findkoss/models/facility_item.dart';
-import 'package:findkoss/models/space.dart';
-import 'package:findkoss/style/style.dart';
-import 'package:findkoss/style/textstyle.dart';
-import 'package:findkoss/widgets/facility_item.dart';
+import 'package:dillfindkoss/models/facility_item.dart';
+import 'package:dillfindkoss/models/space.dart';
+import 'package:dillfindkoss/style/style.dart';
+import 'package:dillfindkoss/style/textstyle.dart';
+import 'package:dillfindkoss/widgets/facility_item.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-// import 'package:';
 
 class Detail extends StatelessWidget {
   final Space? space;

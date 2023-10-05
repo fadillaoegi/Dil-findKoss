@@ -1,4 +1,4 @@
-import 'package:findkoss/style/textstyle.dart';
+import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 
 var text1 = Text(

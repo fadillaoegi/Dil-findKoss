@@ -1,6 +1,6 @@
-import 'package:findkoss/models/space.dart';
-import 'package:findkoss/pages/detail/detail_page.dart';
-import 'package:findkoss/style/textstyle.dart';
+import 'package:dillfindkoss/models/space.dart';
+import 'package:dillfindkoss/pages/detail/detail_page.dart';
+import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../style/style.dart';
 // import '../models/space.dart';
@@ -25,6 +25,12 @@ class Rekomend extends StatelessWidget {
               height: 110,
               width: 130,
               child: Stack(children: [
+                // NOTE: FOR API
+                //  Image.network(
+                //   spaceModel.imageUrl!,
+                // ),
+
+                // NOTE: FOR LOCAL
                 Image.asset(
                   spaceModel.imageUrl!,
                 ),
@@ -43,12 +49,19 @@ class Rekomend extends StatelessWidget {
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                          Image.network(
-                            // "assets/images/icon_star.png",
+                          // NOTE: FOR LOCAL
+                          Image.asset(
                             spaceModel.imageUrl!,
                             width: 22,
                             height: 22,
                           ),
+
+                          // NOTE: FOR API
+                          // Image.network(
+                          //   spaceModel.imageUrl!,
+                          //   width: 22,
+                          //   height: 22,
+                          // ),
                           Text(
                             spaceModel.rating.toString(),
                             style: tsWhiteMedium.copyWith(fontSize: 13),

@@ -1,8 +1,8 @@
-import 'package:findkoss/models/city.dart';
-import 'package:findkoss/models/guidance.dart';
-import 'package:findkoss/models/space.dart';
-import 'package:findkoss/providers/space_provider.dart';
-import 'package:findkoss/style/textstyle.dart';
+import 'package:dillfindkoss/models/city.dart';
+import 'package:dillfindkoss/models/guidance.dart';
+import 'package:dillfindkoss/models/space.dart';
+import 'package:dillfindkoss/providers/space_provider.dart';
+import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../style/style.dart';
@@ -19,6 +19,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var spaceProvider = Provider.of<SpaceProvider>(context);
+    spaceProvider.getApiRecomendedSpace();
 
     return Scaffold(
       body: SafeArea(
@@ -59,7 +60,7 @@ class Home extends StatelessWidget {
                               1, 'Kendari', 'assets/images/city1.png', true)),
                           boxW12,
                           CityCard(City(
-                              2, 'Surabaya', 'assets/images/city2.png', false)),
+                              2, 'Surabaya', 'assets/images/city2.png', true)),
                           boxW12,
                           CityCard(City(
                               3, 'Makasar', 'assets/images/city3.png', false)),
@@ -85,13 +86,14 @@ class Home extends StatelessWidget {
                     boxH16,
                     SizedBox(
                       height: 300,
-                      child: FutureBuilder<Space>(
+                      child: FutureBuilder<List<Space>>(
                         future: spaceProvider.getApiRecomendedSpace(),
                         builder: (context, snapshot) {
                           if (snapshot.connectionState ==
                               ConnectionState.done) {
                             return ListView(
-                                scrollDirection: Axis.horizontal, children: []);
+                                scrollDirection: Axis.horizontal,
+                                children: const []);
                           } else {
                             return const Center(
                               child: CircularProgressIndicator(),

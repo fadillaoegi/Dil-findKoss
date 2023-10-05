@@ -1,5 +1,5 @@
-import 'package:findkoss/models/guidance.dart';
-import 'package:findkoss/style/textstyle.dart';
+import 'package:dillfindkoss/models/guidance.dart';
+import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../style/style.dart';
 

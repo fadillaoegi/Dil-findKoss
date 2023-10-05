@@ -1,4 +1,4 @@
-import 'package:findkoss/providers/space_provider.dart';
+import 'package:dillfindkoss/providers/space_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'pages/splash/splash.dart';
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       create: (context) => SpaceProvider(),
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'FindKos',
+          title: 'DilFindKos',
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),

@@ -1,4 +1,4 @@
-package com.example.findkoss
+package com.example.dillfindkoss
 
 import io.flutter.embedding.android.FlutterActivity
 

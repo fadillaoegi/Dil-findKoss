@@ -1,6 +1,7 @@
-import 'package:findkoss/models/facility_item.dart';
-import 'package:findkoss/style/style.dart';
-import 'package:findkoss/style/textstyle.dart';
+
+import 'package:dillfindkoss/models/facility_item.dart';
+import 'package:dillfindkoss/style/style.dart';
+import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 
 

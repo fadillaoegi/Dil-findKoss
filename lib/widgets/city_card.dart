@@ -1,4 +1,4 @@
-import 'package:findkoss/models/city.dart';
+import 'package:dillfindkoss/models/city.dart';
 import 'package:flutter/material.dart';
 import '../style/style.dart';
 import '../style/textstyle.dart';
@@ -21,7 +21,15 @@ class CityCard extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Image.network(
+                  // NOTE: FOR API
+                  // Image.network(
+                  //   city.imageUrl,
+                  //   width: 120,
+                  //   height: 102,
+                  //   fit: BoxFit.cover,
+                  // ),
+                  // NOTE: FOR LOCAL
+                  Image.asset(
                     city.imageUrl,
                     width: 120,
                     height: 102,
