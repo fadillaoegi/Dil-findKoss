@@ -28,7 +28,7 @@ class Rekomend extends StatelessWidget {
               width: 130,
               child: Stack(children: [
                 // NOTE: FOR API
-                 Image.network(
+                Image.network(
                   spaceModel.imageUrl,
                 ),
 
@@ -53,19 +53,19 @@ class Rekomend extends StatelessWidget {
                             children: [
                           // NOTE: FOR LOCAL
                           // Image.asset(
-                          //   spaceModel.imageUrl,
-                          //   width: 22,
-                          //   height: 22,
+                          //   "assets/image/icon_star.png",
+                          //   width: 2,
+                          //   height: 2,
                           // ),
 
                           // NOTE: FOR API
-                          Image.network(
-                            spaceModel.imageUrl,
-                            width: 22,
-                            height: 22,
-                          ),
+                          // Image.network(
+                          //   spaceModel.,
+                          //   width: 22,
+                          //   height: 22,
+                          // ),
                           Text(
-                            spaceModel.rating.toString(),
+                            "${spaceModel.rating.toString()}/5",
                             style: tsWhiteMedium.copyWith(fontSize: 13),
                           )
                         ])),

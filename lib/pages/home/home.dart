@@ -121,7 +121,7 @@ class Home extends StatelessWidget {
                           print(snapshot);
                           if (snapshot.hasData) {
                             return ListView(
-                              scrollDirection: Axis.horizontal,
+                              scrollDirection: Axis.vertical,
                               children: snapshot.data!
                                   .map((item) => Rekomend(item))
                                   .toList(),
