@@ -39,7 +39,7 @@ class Rekomend extends StatelessWidget {
                 Align(
                   alignment: Alignment.topRight,
                   child: Container(
-                    height: 30,
+                    height: 40,
                     width: 70,
                     decoration: BoxDecoration(
                       color: colorPurple,
@@ -52,15 +52,15 @@ class Rekomend extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                           // NOTE: FOR LOCAL
-                          // Image.asset(
-                          //   "assets/image/icon_star.png",
-                          //   width: 2,
-                          //   height: 2,
-                          // ),
+                          Image.asset(
+                            "assets/images/icon_star.png",
+                            width: 20.0,
+                            height: 20.0,
+                          ),
 
                           // NOTE: FOR API
                           // Image.network(
-                          //   spaceModel.,
+                          //   spaceModel.imageUrl,
                           //   width: 22,
                           //   height: 22,
                           // ),
