@@ -1,13 +1,15 @@
 import 'package:dillfindkoss/models/facility_item.dart';
+import 'package:dillfindkoss/models/space.dart';
 import 'package:dillfindkoss/style/style.dart';
 import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:dillfindkoss/widgets/facility_item.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+// ignore: must_be_immutable
 class Detail extends StatelessWidget {
-  // final Space? space;
-  const Detail({Key? key}) : super(key: key);
+  Space spaceModel;
+  Detail(this.spaceModel, {Key? key}) : super(key: key);
 
   // lauchUrl(String url) async {
   //   if (await canLaunchUrlString(url)) {
@@ -23,8 +25,15 @@ class Detail extends StatelessWidget {
       body: SafeArea(
         bottom: false,
         child: Stack(children: [
-          Image.asset(
-            "assets/images/thumbnail.png",
+          // Image.asset(
+          //   "assets/images/thumbnail.png",
+          //   width: MediaQuery.of(context).size.width,
+          //   height: 350.0,
+          //   fit: BoxFit.cover,
+          // ),
+          // NOTE: WITH API
+          Image.network(
+            spaceModel.imageUrl,
             width: MediaQuery.of(context).size.width,
             height: 350.0,
             fit: BoxFit.cover,

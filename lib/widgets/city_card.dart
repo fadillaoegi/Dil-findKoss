@@ -1,5 +1,5 @@
 import 'package:dillfindkoss/models/city.dart';
-import 'package:dillfindkoss/pages/detail/detail_page.dart';
+// import 'package:dillfindkoss/pages/detail/detail_page.dart';
 import 'package:flutter/material.dart';
 import '../style/style.dart';
 import '../style/textstyle.dart';
@@ -14,11 +14,11 @@ class CityCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const Detail(),
-            ));
+        // Navigator.push(
+        //     context,
+        //     MaterialPageRoute(
+        //       builder: (context) =>  Detail(cityModel),
+        //     ));
       },
       child: ClipRRect(
         child: ClipRRect(

@@ -14,7 +14,7 @@ class Rekomend extends StatelessWidget {
       onTap: () {
         // NOTE: DATA STATIS
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const Detail()));
+            context, MaterialPageRoute(builder: (context) =>  Detail(spaceModel)));
         // NOTE:  DATA MODEL
         // Navigator.push(context,
         //     MaterialPageRoute(builder: (context) => Detail(spaceModel)));
