@@ -6,9 +6,9 @@ import '../style/textstyle.dart';
 
 // ignore: must_be_immutable
 class CityCard extends StatelessWidget {
-  City city;
+  City cityModel;
   // Space? spaceModel;
-  CityCard(this.city, {Key? key}) : super(key: key);
+  CityCard(this.cityModel, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,12 +40,12 @@ class CityCard extends StatelessWidget {
                     // ),
                     // NOTE: FOR LOCAL
                     Image.asset(
-                      city.imageUrl,
+                      cityModel.imageUrl,
                       width: 120,
                       height: 102,
                       fit: BoxFit.cover,
                     ),
-                    city.popular
+                    cityModel.popular
                         ? Align(
                             alignment: Alignment.topRight,
                             child: Container(
@@ -70,7 +70,7 @@ class CityCard extends StatelessWidget {
                 ),
                 boxH24,
                 Text(
-                  city.name,
+                  cityModel.name,
                   // city.name,
                   style: tsBlackBold.copyWith(fontSize: 16.0),
                 )

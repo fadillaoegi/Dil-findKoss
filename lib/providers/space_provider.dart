@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class SpaceProvider extends ChangeNotifier {
-  Future<List<Space>> getApiRecomendedSpace() async {
+
+  // NOTE: CARA JIKA TYPE DATA STRING SEMUA
+  Future<List<Space>> getApi() async {
     try {
       var result = await http.get(
         Uri.parse(
@@ -32,7 +34,7 @@ class SpaceProvider extends ChangeNotifier {
       }
     } catch (e) {
       // ignore: avoid_print
-      print(e);
+      print("API tidak ter-Hit: $e");
       return [];
     }
   }

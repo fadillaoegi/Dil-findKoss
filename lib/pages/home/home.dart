@@ -4,6 +4,7 @@ import 'package:dillfindkoss/models/space.dart';
 import 'package:dillfindkoss/providers/space_provider.dart';
 import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:dillfindkoss/widgets/city_card.dart';
+import 'package:dillfindkoss/widgets/rekomend_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../style/style.dart';
@@ -13,7 +14,6 @@ import '../../widgets/bottom_nav.dart';
 
 // ignore: must_be_immutable
 class Home extends StatelessWidget {
-  // Space? spaceModel;
   const Home({
     Key? key,
   }) : super(key: key);
@@ -21,6 +21,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var spaceProvider = Provider.of<SpaceProvider>(context);
+    // spaceProvider.getApi();
     return Scaffold(
       body: SafeArea(
         bottom: false,
@@ -63,20 +64,39 @@ class Home extends StatelessWidget {
                               name: 'Kendari',
                               imageUrl: 'assets/images/city1.png',
                               popular: true)),
-                          // boxW12,
-
+                          boxW12,
+                          CityCard(City(
+                              id: "2",
+                              name: 'Surabaya',
+                              imageUrl: 'assets/images/city2.png',
+                              popular: false)),
                           // CityCard(City(
                           //     2, 'Surabaya', 'assets/images/city2.png', false)),
-                          // boxW12,
+                          boxW12,
+                          CityCard(City(
+                              id: "3",
+                              name: 'Makassar',
+                              imageUrl: 'assets/images/city3.png',
+                              popular: false)),
                           // CityCard(City(
                           //     3, 'Makasar', 'assets/images/city3.png', false)),
-                          // boxW12,
+                          boxW12,
+                          CityCard(City(
+                              id: "4",
+                              name: 'Surabaya',
+                              imageUrl: 'assets/images/city4.png',
+                              popular: true)),
                           // CityCard(City(
                           //     4, 'Palembang', 'assets/images/city4.png', true)),
-                          // boxW12,
+                          boxW12,
+                          CityCard(City(
+                              id: "5",
+                              name: 'Surabaya',
+                              imageUrl: 'assets/images/city5.png',
+                              popular: true)),
                           // CityCard(City(
                           //     5, 'Tegal', 'assets/images/city5.png', true)),
-                          // boxW12,
+                          boxW12,
                           // CityCard(City(6, 'Semaraaang',
                           //     'assets/images/city6.png', false)),
                         ],
@@ -92,24 +112,20 @@ class Home extends StatelessWidget {
                     boxH16,
                     SizedBox(
                       height: 300,
+                      width: double.infinity,
                       child: FutureBuilder<List<Space>>(
-                        future: spaceProvider.getApiRecomendedSpace(),
+                        future: spaceProvider.getApi(),
                         builder: (context, snapshot) {
                           // List<Space>? dataApi = snapshot.data!;
                           // ignore: avoid_print
                           print(snapshot);
-                          if (snapshot.connectionState ==
-                              ConnectionState.done) {
+                          if (snapshot.hasData) {
                             return ListView(
                               scrollDirection: Axis.horizontal,
-                              children:
-                                  // snapshot.data.map((space) => Rekomend()),
-                                  const [],
-                            );
-                          } else if (snapshot.connectionState ==
-                              ConnectionState.waiting) {
-                            return const Center(
-                              child: CircularProgressIndicator(),
+                              children: snapshot.data!
+                                  .map((item) => Rekomend(item))
+                                  .toList(),
+                              // const [],
                             );
                           } else {
                             return Center(
@@ -127,11 +143,17 @@ class Home extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        GuidanceCard(Guidance(1, 'City Guidelines',
-                            'assets/images/tips1.png', '20 Apr')),
+                        GuidanceCard(Guidance(
+                            id: "1",
+                            name: 'City Guidelines',
+                            imageUrl: 'assets/images/tips1.png',
+                            updateAt: '20 Apr')),
                         boxH30,
-                        GuidanceCard(Guidance(2, 'Jakarta Fairship',
-                            'assets/images/tips2.png', '11 Dec')),
+                        GuidanceCard(Guidance(
+                            id: "2",
+                            name: 'Jakarta Fairship',
+                            imageUrl: 'assets/images/tips2.png',
+                            updateAt: '11 Dec')),
                         boxH30,
                       ],
                     )

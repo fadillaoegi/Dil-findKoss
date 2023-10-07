@@ -3,11 +3,9 @@ import 'package:dillfindkoss/pages/detail/detail_page.dart';
 import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:flutter/material.dart';
 import '../style/style.dart';
-// import '../models/space.dart';
 
 class Rekomend extends StatelessWidget {
   final Space spaceModel;
-  // String? imageUrl;
   const Rekomend(this.spaceModel, {Key? key}) : super(key: key);
 
   @override
@@ -30,14 +28,14 @@ class Rekomend extends StatelessWidget {
               width: 130,
               child: Stack(children: [
                 // NOTE: FOR API
-                //  Image.network(
-                //   spaceModel.imageUrl!,
-                // ),
+                 Image.network(
+                  spaceModel.imageUrl,
+                ),
 
                 // NOTE: FOR LOCAL
-                Image.asset(
-                  spaceModel.imageUrl!,
-                ),
+                // Image.asset(
+                //   spaceModel.imageUrl,
+                // ),
                 Align(
                   alignment: Alignment.topRight,
                   child: Container(
@@ -54,18 +52,18 @@ class Rekomend extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                           // NOTE: FOR LOCAL
-                          Image.asset(
-                            spaceModel.imageUrl!,
-                            width: 22,
-                            height: 22,
-                          ),
-
-                          // NOTE: FOR API
-                          // Image.network(
-                          //   spaceModel.imageUrl!,
+                          // Image.asset(
+                          //   spaceModel.imageUrl,
                           //   width: 22,
                           //   height: 22,
                           // ),
+
+                          // NOTE: FOR API
+                          Image.network(
+                            spaceModel.imageUrl,
+                            width: 22,
+                            height: 22,
+                          ),
                           Text(
                             spaceModel.rating.toString(),
                             style: tsWhiteMedium.copyWith(fontSize: 13),
@@ -82,7 +80,7 @@ class Rekomend extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  spaceModel.name!,
+                  spaceModel.name,
                   style: tsBlackMedium.copyWith(fontSize: 18),
                 ),
                 boxH2,
