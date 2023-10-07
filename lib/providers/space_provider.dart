@@ -6,24 +6,34 @@ import 'package:http/http.dart' as http;
 
 class SpaceProvider extends ChangeNotifier {
   Future<List<Space>> getApiRecomendedSpace() async {
-    var result = await http.get(
-      Uri.parse(
-        ApiConfig.baseUrl,
-      ),
-    );
+    try {
+      var result = await http.get(
+        Uri.parse(
+          ApiConfig.baseUrl,
+        ),
+      );
 
 // Testing APi
-    // print(result.statusCode);
-    // print(result.body);
+      // print(result.statusCode);
+      // print(result.body);
 
-    if (result.statusCode == 200) {
-      List data = jsonDecode(result.body);
+      if (result.statusCode == 200) {
+        List<Space> dataApiSpaces = [];
 
-      List<Space> spaces = data.map((item) => Space.fromJson(item)).toList();
+        List parseData = jsonDecode(result.body);
 
-      return spaces;
-    } else {
-      return <Space>[];
+        for (var data in parseData) {
+          dataApiSpaces.add(Space.fromJson(data));
+        }
+
+        return dataApiSpaces;
+      } else {
+        return [];
+      }
+    } catch (e) {
+      // ignore: avoid_print
+      print(e);
+      return [];
     }
   }
 }

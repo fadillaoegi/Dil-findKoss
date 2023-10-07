@@ -1,5 +1,4 @@
 import 'package:dillfindkoss/models/facility_item.dart';
-import 'package:dillfindkoss/models/space.dart';
 import 'package:dillfindkoss/style/style.dart';
 import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:dillfindkoss/widgets/facility_item.dart';
@@ -7,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class Detail extends StatelessWidget {
-  final Space? space;
-  const Detail({Key? key, this.space}) : super(key: key);
+  // final Space? space;
+  const Detail({Key? key}) : super(key: key);
 
   // lauchUrl(String url) async {
   //   if (await canLaunchUrlString(url)) {

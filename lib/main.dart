@@ -1,7 +1,8 @@
+import 'package:dillfindkoss/pages/home/home.dart';
 import 'package:dillfindkoss/providers/space_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'pages/splash/splash.dart';
+// import 'pages/splash/splash.dart';
 
 void main() => runApp(const MyApp());
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: const Splash()),
+          home: const Home()),
     );
   }
 }

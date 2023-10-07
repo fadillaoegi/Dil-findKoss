@@ -7,6 +7,7 @@ import '../style/textstyle.dart';
 // ignore: must_be_immutable
 class CityCard extends StatelessWidget {
   City city;
+  // Space? spaceModel;
   CityCard(this.city, {Key? key}) : super(key: key);
 
   @override

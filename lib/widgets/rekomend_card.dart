@@ -6,16 +6,20 @@ import '../style/style.dart';
 // import '../models/space.dart';
 
 class Rekomend extends StatelessWidget {
-  // const rekomend({Key? key}) : super(key: key);
   final Space spaceModel;
+  // String? imageUrl;
   const Rekomend(this.spaceModel, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        // NOTE: DATA STATIS
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => const Detail()));
+        // NOTE:  DATA MODEL
+        // Navigator.push(context,
+        //     MaterialPageRoute(builder: (context) => Detail(spaceModel)));
       },
       child: Row(
         children: [

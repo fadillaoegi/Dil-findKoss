@@ -3,24 +3,24 @@ import 'package:dillfindkoss/models/guidance.dart';
 import 'package:dillfindkoss/models/space.dart';
 import 'package:dillfindkoss/providers/space_provider.dart';
 import 'package:dillfindkoss/style/textstyle.dart';
+import 'package:dillfindkoss/widgets/city_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../style/style.dart';
 import '../../text/texthome.dart';
-import '../../widgets/city_card.dart';
 import '../../widgets/guidance_card.dart';
 import '../../widgets/bottom_nav.dart';
 
 // ignore: must_be_immutable
 class Home extends StatelessWidget {
-  Space? spaceModel;
-  Home({Key? key, this.spaceModel}) : super(key: key);
+  // Space? spaceModel;
+  const Home({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var spaceProvider = Provider.of<SpaceProvider>(context);
-    spaceProvider.getApiRecomendedSpace();
-
     return Scaffold(
       body: SafeArea(
         bottom: false,
@@ -56,23 +56,29 @@ class Home extends StatelessWidget {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
+                          // CityCard(City(
+                          //     1, 'Kendari', 'assets/images/city1.png', true)),
                           CityCard(City(
-                              1, 'Kendari', 'assets/images/city1.png', true)),
-                          boxW12,
-                          CityCard(City(
-                              2, 'Surabaya', 'assets/images/city2.png', true)),
-                          boxW12,
-                          CityCard(City(
-                              3, 'Makasar', 'assets/images/city3.png', false)),
-                          boxW12,
-                          CityCard(City(
-                              4, 'Palembang', 'assets/images/city4.png', true)),
-                          boxW12,
-                          CityCard(City(
-                              5, 'Tegal', 'assets/images/city5.png', true)),
-                          boxW12,
-                          CityCard(City(6, 'Semaraaang',
-                              'assets/images/city6.png', false)),
+                              id: "1",
+                              name: 'Kendari',
+                              imageUrl: 'assets/images/city1.png',
+                              popular: true)),
+                          // boxW12,
+
+                          // CityCard(City(
+                          //     2, 'Surabaya', 'assets/images/city2.png', false)),
+                          // boxW12,
+                          // CityCard(City(
+                          //     3, 'Makasar', 'assets/images/city3.png', false)),
+                          // boxW12,
+                          // CityCard(City(
+                          //     4, 'Palembang', 'assets/images/city4.png', true)),
+                          // boxW12,
+                          // CityCard(City(
+                          //     5, 'Tegal', 'assets/images/city5.png', true)),
+                          // boxW12,
+                          // CityCard(City(6, 'Semaraaang',
+                          //     'assets/images/city6.png', false)),
                         ],
                       ),
                     ),
@@ -89,14 +95,26 @@ class Home extends StatelessWidget {
                       child: FutureBuilder<List<Space>>(
                         future: spaceProvider.getApiRecomendedSpace(),
                         builder: (context, snapshot) {
+                          // List<Space>? dataApi = snapshot.data!;
+                          // ignore: avoid_print
+                          print(snapshot);
                           if (snapshot.connectionState ==
                               ConnectionState.done) {
                             return ListView(
-                                scrollDirection: Axis.horizontal,
-                                children: const []);
-                          } else {
+                              scrollDirection: Axis.horizontal,
+                              children:
+                                  // snapshot.data.map((space) => Rekomend()),
+                                  const [],
+                            );
+                          } else if (snapshot.connectionState ==
+                              ConnectionState.waiting) {
                             return const Center(
                               child: CircularProgressIndicator(),
+                            );
+                          } else {
+                            return Center(
+                              child: Text(
+                                  "Data Tidak Terdeteksi: ${snapshot.connectionState}"),
                             );
                           }
                         },
