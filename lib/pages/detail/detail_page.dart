@@ -6,7 +6,7 @@ import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:dillfindkoss/widgets/facility_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // ignore: must_be_immutable
 class Detail extends StatelessWidget {
@@ -220,8 +220,8 @@ class Detail extends StatelessWidget {
                           InkWell(
                             onTap: (() {
                               // launchUrl(
-                              //   'https://goo.gl/maps/9TjHRcRfDtCkUiLSA');
-                              launchUrlString(spaceModel.mapUrl);
+                              //     'https://goo.gl/maps/9TjHRcRfDtCkUiLSA');
+                              launchUrl(Uri.parse(spaceModel.mapUrl));
                             }),
                             child: Image.asset(
                               "assets/images/btn_map.png",
@@ -236,7 +236,7 @@ class Detail extends StatelessWidget {
                           width: MediaQuery.of(context).size.width,
                           child: ElevatedButton(
                             onPressed: () {
-                              launchUrlString(spaceModel.phone);
+                              launchUrl(Uri.parse("tel: ${spaceModel.phone}"));
                             },
                             child: Text(
                               "Book Now",
