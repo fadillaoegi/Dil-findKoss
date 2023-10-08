@@ -13,14 +13,6 @@ class Detail extends StatelessWidget {
   Space spaceModel;
   Detail(this.spaceModel, {Key? key}) : super(key: key);
 
-  // lauchUrl(String url) async {
-  //   if (await canLaunchUrlString(url)) {
-  //     lauchUrl(url);
-  //   } else {
-  //     throw (url);
-  //   }
-  // }
-
   @override
   Widget build(BuildContext context) {
     var spaceProvider = Provider.of<SpaceProvider>(context);
