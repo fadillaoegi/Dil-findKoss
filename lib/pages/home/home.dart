@@ -116,21 +116,28 @@ class Home extends StatelessWidget {
                       child: FutureBuilder<List<Space>>(
                         future: spaceProvider.getApi(),
                         builder: (context, snapshot) {
-                          // List<Space>? dataApi = snapshot.data!;
                           // ignore: avoid_print
-                          print(snapshot);
+                          // print(snapshot);
                           if (snapshot.hasData) {
                             return ListView(
                               scrollDirection: Axis.vertical,
                               children: snapshot.data!
-                                  .map((item) => Rekomend(item))
+                                  .map((item) => Container(
+                                      margin: const EdgeInsets.symmetric(
+                                          vertical: 10.0),
+                                      child: Rekomend(item)))
                                   .toList(),
                               // const [],
                             );
                           } else {
                             return Center(
-                              child: Text(
-                                  "Data Tidak Terdeteksi: ${snapshot.connectionState}"),
+                              child: Column(
+                                children: [
+                                  const CircularProgressIndicator(),
+                                  Text(
+                                      "Data Tidak Terdeteksi: ${snapshot.connectionState}")
+                                ],
+                              ),
                             );
                           }
                         },

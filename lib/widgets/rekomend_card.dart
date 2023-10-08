@@ -13,8 +13,8 @@ class Rekomend extends StatelessWidget {
     return InkWell(
       onTap: () {
         // NOTE: DATA STATIS
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) =>  Detail(spaceModel)));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => Detail(spaceModel)));
         // NOTE:  DATA MODEL
         // Navigator.push(context,
         //     MaterialPageRoute(builder: (context) => Detail(spaceModel)));
@@ -30,6 +30,8 @@ class Rekomend extends StatelessWidget {
                 // NOTE: FOR API
                 Image.network(
                   spaceModel.imageUrl,
+                  height: 150.0,
+                  fit: BoxFit.cover,
                 ),
 
                 // NOTE: FOR LOCAL

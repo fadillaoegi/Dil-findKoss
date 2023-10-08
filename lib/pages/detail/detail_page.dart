@@ -1,9 +1,11 @@
 import 'package:dillfindkoss/models/facility_item.dart';
 import 'package:dillfindkoss/models/space.dart';
+import 'package:dillfindkoss/providers/space_provider.dart';
 import 'package:dillfindkoss/style/style.dart';
 import 'package:dillfindkoss/style/textstyle.dart';
 import 'package:dillfindkoss/widgets/facility_item.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 // ignore: must_be_immutable
@@ -21,6 +23,7 @@ class Detail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var spaceProvider = Provider.of<SpaceProvider>(context);
     return Scaffold(
       body: SafeArea(
         bottom: false,
@@ -60,7 +63,8 @@ class Detail extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Lippo",
+                            // "Lippo",
+                            spaceModel.name,
                             style: tsBlackBold.copyWith(fontSize: 22.0),
                           ),
                           Row(
@@ -100,8 +104,8 @@ class Detail extends StatelessWidget {
                       // NOTE: Price
                       Text.rich(
                         TextSpan(
-                            // text: "\$ ${spaceModel.price} ",
-                            text: "\$ 52",
+                            text: "\$ ${spaceModel.price} ",
+                            // text: "\$ 52",
                             style: ts4.copyWith(fontSize: 16),
                             children: [
                               TextSpan(
@@ -119,13 +123,17 @@ class Detail extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           FacilityItem(ModelFacility(
-                              'assets/images/icon_kitchen.png', 'Kitchen', 2)),
+                              'assets/images/icon_kitchen.png',
+                              'Kitchen',
+                              spaceModel.numberOfKitchens)),
                           FacilityItem(ModelFacility(
-                              'assets/images/icon_bedroom.png', 'Badroom', 3)),
+                              'assets/images/icon_bedroom.png',
+                              'Badroom',
+                              spaceModel.numberOfBedrooms)),
                           FacilityItem(ModelFacility(
                               "assets/images/icon_cupboard.png",
                               "Bag Lemari",
-                              3))
+                              spaceModel.numberOfCupboards))
                         ],
                       ),
                       boxH30,
@@ -134,33 +142,70 @@ class Detail extends StatelessWidget {
                       boxH12,
                       SizedBox(
                         height: 88,
-                        child: ListView(
-                          scrollDirection: Axis.horizontal,
-                          children: [
-                            Image.asset(
-                              'assets/images/photo1.png',
-                              width: 110.0,
-                              height: 88,
-                            ),
-                            boxW4,
-                            Image.asset(
-                              'assets/images/photo2.png',
-                              width: 110.0,
-                              height: 88,
-                            ),
-                            boxW4,
-                            Image.asset(
-                              'assets/images/photo3.png',
-                              width: 110.0,
-                              height: 88,
-                            ),
-                            boxW4,
-                            Image.asset(
-                              'assets/images/photo1.png',
-                              width: 110.0,
-                              height: 88,
-                            ),
-                          ],
+                        child: FutureBuilder<List<Space>>(
+                          future: spaceProvider.getApi(),
+                          builder: (context, snapshot) {
+                            if (snapshot.hasData) {
+                              return ListView(
+                                  scrollDirection: Axis.horizontal,
+                                  children:
+                                      // NOTE: DATA FROM API
+                                      spaceModel.photos
+                                          .map((item) => Container(
+                                                margin: const EdgeInsets.only(
+                                                    right: 20.0),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          16.0),
+                                                  child: Image.network(
+                                                    item,
+                                                    height: 88.0,
+                                                    width: 110.0,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                              ))
+                                          .toList()
+                                  // NOTE: DATA STATIS
+                                  // [
+                                  //   Image.asset(
+                                  //     'assets/images/photo1.png',
+                                  //     width: 110.0,
+                                  //     height: 88,
+                                  //   ),
+                                  //   boxW4,
+                                  //   Image.asset(
+                                  //     'assets/images/photo2.png',
+                                  //     width: 110.0,
+                                  //     height: 88,
+                                  //   ),
+                                  //   boxW4,
+                                  //   Image.asset(
+                                  //     'assets/images/photo3.png',
+                                  //     width: 110.0,
+                                  //     height: 88,
+                                  //   ),
+                                  //   boxW4,
+                                  //   Image.asset(
+                                  //     'assets/images/photo1.png',
+                                  //     width: 110.0,
+                                  //     height: 88,
+                                  //   ),
+                                  // ],
+                                  );
+                            } else {
+                              return Center(
+                                child: Column(
+                                  children: [
+                                    const CircularProgressIndicator(),
+                                    Text(
+                                        "Data Tidak Terdeteksi: ${snapshot.connectionState}")
+                                  ],
+                                ),
+                              );
+                            }
+                          },
                         ),
                       ),
 
@@ -176,15 +221,15 @@ class Detail extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Jln. Kappan Sukses No. 20\nPalembang",
+                            // "Jln. Kappan Sukses No. 20\nPalembang",
+                            spaceModel.address,
                             style: ts3.copyWith(fontSize: 14.0),
                           ),
                           InkWell(
                             onTap: (() {
                               // launchUrl(
                               //   'https://goo.gl/maps/9TjHRcRfDtCkUiLSA');
-                              launchUrlString(
-                                  'https://goo.gl/maps/9TjHRcRfDtCkUiLSA');
+                              launchUrlString(spaceModel.mapUrl);
                             }),
                             child: Image.asset(
                               "assets/images/btn_map.png",
@@ -199,7 +244,7 @@ class Detail extends StatelessWidget {
                           width: MediaQuery.of(context).size.width,
                           child: ElevatedButton(
                             onPressed: () {
-                              launchUrlString('tel://+6285211119246');
+                              launchUrlString(spaceModel.phone);
                             },
                             child: Text(
                               "Book Now",
