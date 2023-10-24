@@ -20,6 +20,7 @@ class Detail extends StatelessWidget {
       body: SafeArea(
         bottom: false,
         child: Stack(children: [
+          // NOTE: STATIS
           // Image.asset(
           //   "assets/images/thumbnail.png",
           //   width: MediaQuery.of(context).size.width,
